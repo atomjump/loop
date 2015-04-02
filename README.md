@@ -49,7 +49,7 @@ Note: jQuery ver 1.9.1 is used.  Other jQuery versions will likely work also.
   This ensures only you as a logged in users will receive feedback from your site.
   Separate multiple users with a comma, e.g. "123.456.123.32:1200,123.456.123.32:1201"
   
-7. If you wish to, you can send us your mobile phone number to receive SMS messages when there is any feedback
+7. If you wish to, you can enter your mobile phone number under Settings to receive SMS messages when there is any feedback
 (at a cost of 16c per message. Messages within 5 minutes of each other do not trigger an SMS).  If you want to 
 include an sms for the group modify the myMachineUser string on your page to include the 3rd term 'sms'
 e.g. "123.456.123.32:1200:sms,123.456.123.32:1201:sms".  If you don't include an 'sms' for any one user, they
