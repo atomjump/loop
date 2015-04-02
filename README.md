@@ -55,7 +55,6 @@ include an sms for the group modify the myMachineUser string on your page to inc
 e.g. "123.456.123.32:1200:sms,123.456.123.32:1201:sms".  If you don't include an 'sms' for any one user, they
 won't receive sms messages 
 
-You should already be subscribed via Paypal at a monthly subscription rate, as specified on the AtomJump site.
 If you wish to send SMS messages, we will keep track of messages sent, and charge independently based on usage, on a monthly basis.
 
 
