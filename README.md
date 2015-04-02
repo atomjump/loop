@@ -1,5 +1,5 @@
 # loop
-Smart Feedback
+**Smart Feedback**
 
 This tool provides a 'WhatsApp-like' group discussion forum from a popup on your website. It is ideal for feedback, but can also be used as a live discussion tool, or a CRM.  We actually run our entire operation off one page with several of these popups on it.
 
@@ -19,19 +19,19 @@ You are most welcome to adjust the styling by making changes to the CSS file for
 2. Look carefully at the index.html example.  
 
 	The code between
-	 <!-- AtomJump Feedback Starts -->
+	`<!-- AtomJump Feedback Starts -->`
 	 
 	 and
-	 <!-- AtomJump Feedback Ends -->
+	 `<!-- AtomJump Feedback Ends -->`
 	 
-	 should be put into your page's <head> section.
+	 should be put into your page's `<head>` section.
 	
 	Links can be added to the comments with
-	<a class="comment-open" href="javascript:">Click me for comments</a>
+	`<a class="comment-open" href="javascript:">Click me for comments</a>`
 	
 	The code 
-	<div id="comment-holder"></div>
-	must be placed anywhere in the <body> section.
+	`<div id="comment-holder"></div>`
+	must be placed anywhere in the `<body>` section.
 	
 3. Copy the contents of /css into your own css path and adjust any references to suit your project's path.
 4. Copy the contents of /js into your own js path and adjust any references to suit your project's path. 
@@ -62,7 +62,7 @@ If you wish to send SMS messages, we will keep track of messages sent, and charg
 # To have more than one feedback forum on a single page
 
 Add the following data tags, and enter your own names/ips:
-<a class="comment-open" data-uniquefeedbackid="my_different_forum_name" data-mymachineuser="10.12.13.14:2" href="javascript:">Open special forum</a>
+```<a class="comment-open" data-uniquefeedbackid="my_different_forum_name" data-mymachineuser="10.12.13.14:2" href="javascript:">Open special forum</a>```
 
 
 For more details see
