@@ -66,12 +66,12 @@ Add the following data tags, and enter your own names/ips:
 
 Open the feedback forum in your browser.
 
-	1. Settings
-	2. Entering an email/Password
-	3. Click save
-	4. Settings
-	5. Clicking: 'Your password', then 'Advanced'
-	6. Edit the 'This forum's private owners' and put in each myMachineUser separated by a comma. 'sms' can be added individually to each user to optionally send an sms also.
+1. Settings
+2. Entering an email/Password
+3. Click save
+4. Settings
+5. Clicking: 'Your password', then 'Advanced'
+6. Edit the 'This forum's private owners' and put in each myMachineUser separated by a comma. 'sms' can be added individually to each user to optionally send an sms also.
 
 e.g. "123.456.123.32:1200:sms,123.456.123.32:1201:sms"
 
