@@ -51,7 +51,7 @@ Note: jQuery ver 1.9.1 is used.  Other jQuery versions will likely work also.
 7. If you wish to, you can enter your mobile phone number under Settings to receive SMS messages when there is any feedback
 (at a cost of 16c per message. Messages within 5 minutes of each other do not trigger an SMS).  If you want to 
 include an sms modify the myMachineUser string on your page to include the 3rd term 'sms'
-e.g. "123.456.123.32:1200:sms".  If you don't include an 'sms', they won't receive sms messages.
+e.g. "123.456.123.32:1200:sms".  If you don't include an 'sms', you won't receive sms messages.
 
 If you wish to send SMS messages, we will keep track of messages sent, and charge independently based on usage, on a monthly basis.
 
