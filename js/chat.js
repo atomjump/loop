@@ -1,7 +1,3 @@
-//(C)2015 AtomJump. MIT license.
-//This file should be included in your javascript directory
-//Contact: peter AT atomjump.com
-
 function myTrim(x)
 {
 	return x.replace(/^\s+|\s+$/gm,'');
@@ -9,14 +5,14 @@ function myTrim(x)
 
 function getCookie(cname)
 {
-	var name = cname + "=";
-	var ca = document.cookie.split(';');
-	for(var i=0; i<ca.length; i++)
-	{
-		var c = myTrim(ca[i]);// ie8 didn't support .trim();
-		if (c.indexOf(name)==0) return c.substring(name.length,c.length);
-	}
-	return "";
+var name = cname + "=";
+var ca = document.cookie.split(';');
+for(var i=0; i<ca.length; i++)
+{
+	var c = myTrim(ca[i]);// ie8 didn't support .trim();
+	if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+}
+return "";
 }
 var commentLayer="comments";
 var ssshoutFreq = 5000;
@@ -27,7 +23,7 @@ var cs = 2438974;
 if(window.location.hostname.match('staging')){			//added window.
 	var ssshoutServer = "https://staging.atomjump.com";
 } else {
-	var ssshoutServer = "https://atomjump.com";
+	var ssshoutServer = "https://atomjump.com";  //https://atomjump.com  normally, https://staging.atomjump.com during testing
 }
 var myUrl = window.location.href;
 var emailCheck;
@@ -123,7 +119,11 @@ $(document).ready(function() {
 							
 							
 						}
-						
+						/*if($(this).data('feedrefresh')) {
+							//Run a refresh on the server side	
+							$.ajax(url: ssshoutServer + "/feed-cron.php?refresh=" + commentLayer, 
+									dataType: "jsonp");
+						}*/
 					}
 					
 					var screenWidth = $(window).width();
@@ -143,6 +143,8 @@ $(document).ready(function() {
 						var wid = ($("#comment-in-here").width() - 5);		//5 is to ensure scroll bar always accounted for
 						var hei = ($("#comment-popup-text-container").height() - 10);
 						
+						//alert('serv:' + ssshoutServer + ' wid' + wid + ' hei' + hei + ' lAYER' + commentLayer + ' WHIS' + whisperOften + ' MYuRL' + myUrl);
+						
 						$("#comment-in-here").html('<iframe id="comment-iframe" src="' + ssshoutServer + '/search-secure.php?width=' + wid + '&height=' + hei + '&uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&clientremoteurl=' + encodeURIComponent(myUrl) + '" frameBorder="0" scrolling="no" width="' + wid + '" height="' + hei + '" onload="$(\'#comment-loading\').hide();" allowfullscreen></iframe>');
 						
 					
@@ -151,7 +153,9 @@ $(document).ready(function() {
 				});
 				
 				$('#comment-close-popup').click(function() {
-					$('#comment-iframe').attr('src','');		//blank out the iframe, kicking in the onbeforeupdate event
+					//blank out the iframe, kicking in the onbeforeupdate event
+					var iframe = document.getElementById('comment-iframe');
+					iframe.parentNode.removeChild(iframe);
 					
 					if(emailCheck) {			//if we have a timer on the email
 						clearTimeout(emailCheck);	
