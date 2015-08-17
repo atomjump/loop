@@ -76,6 +76,20 @@ Open the feedback forum in your browser.
 e.g. "123.456.123.32:1200:sms,123.456.123.32:1201:sms"
 
 
+# To download or retrieve a forum's messages programmatically (Beta)
+
+Endpoint
+https://atomjump.com/download.php
+
+Parameters
+email
+pass
+uniqueFeedbackId
+from_id
+
+Which returns a JSON object. Included for reporting is a 'sentiment' field which measures how positive the comment is.
+
+
 
 For more details see
 https://atomjump.com
