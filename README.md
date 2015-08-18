@@ -78,12 +78,12 @@ e.g. "123.456.123.32:1200:sms,123.456.123.32:1201:sms"
 
 # To download or retrieve a forum's messages programmatically (Beta)
 
-Endpoint
+**Endpoint**
 https://atomjump.com/download.php
 
-Parameters
+**Parameters**
 
-1. **email** 
+1. **email**
    Your AtomJump Loop email address from the standard interface
 2. **pass**  
    Your AtomJump Loop password
@@ -93,7 +93,7 @@ Parameters
    There is a limit of 2000 records per request. To download more, include the 'id' of the last record, from the previous download request, in this field.
 
 
-Which returns a JSON object. Included for reporting is a 'sentiment' field which measures how positive the comment is (-ve, 0= neutral, +ve).
+Which returns a JSON object. Included for reporting is a 'sentiment' field which measures how positive the comment is (< 0 negative, 0= neutral, > 0 positive).
 
 
 
