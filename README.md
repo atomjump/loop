@@ -82,10 +82,11 @@ Endpoint
 https://atomjump.com/download.php
 
 Parameters
-1. email - your AtomJump Loop email address
-2. pass - your AtomJump Loop password
-3. uniqueFeedbackId - the particular forum to view. Note: include 'ajps_' at the start of this string for x.atomjump.com forums.
-4. from_id - there is a limit of 2000 records per request. To download more, include the 'id' of the last record, from the previous download request, in this field.
+
+1. **email**  Your AtomJump Loop email address
+2. **pass**  Your AtomJump Loop password
+3. **uniqueFeedbackId**  The particular forum to view. Note: include 'ajps_' at the start of this string for x.atomjump.com forums.
+4. **from_id**  There is a limit of 2000 records per request. To download more, include the 'id' of the last record, from the previous download request, in this field.
 
 
 Which returns a JSON object. Included for reporting is a 'sentiment' field which measures how positive the comment is (-ve, 0= neutral, +ve).
