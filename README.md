@@ -84,7 +84,7 @@ https://atomjump.com/download.php
 Parameters
 
 1. **email** 
-   Your AtomJump Loop email address
+   Your AtomJump Loop email address from the standard interface
 2. **pass**  
    Your AtomJump Loop password
 3. **uniqueFeedbackId**  
