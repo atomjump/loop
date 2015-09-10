@@ -95,7 +95,7 @@ https://atomjump.com/download.php
 
 Which returns a JSON object. Included for reporting is a 'sentiment' field which measures how positive the comment is (< 0 negative, 0= neutral, > 0 positive).
 
-** Getting a live sentiment **
+# Getting a live sentiment
 
 Include the following parameters along with 1,2, and 3 above.
 
