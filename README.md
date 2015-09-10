@@ -76,7 +76,7 @@ Open the feedback forum in your browser.
 e.g. "123.456.123.32:1200:sms,123.456.123.32:1201:sms"
 
 
-# To download or retrieve a forum's messages programmatically (Beta)
+# To download a forum's messages programmatically
 
 **Endpoint**
 https://atomjump.com/download.php
@@ -95,6 +95,21 @@ https://atomjump.com/download.php
 
 Which returns a JSON object. Included for reporting is a 'sentiment' field which measures how positive the comment is (< 0 negative, 0= neutral, > 0 positive).
 
+** Getting a live sentiment **
+
+Include the following parameters along with 1,2, and 3 above.
+
+4. **format**
+
+   Set to 'avg'
+   
+5. **duration**
+ 
+   Period over which to average in seconds.
+   
+The response will be an average over the last period of all the message sentiment values.
+This will be expressed as a single number eg. 5.324.
+Note: it can take up to 1 minute before any new message's sentiment will be calculated.
 
 
 For more details see
