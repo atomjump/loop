@@ -40,7 +40,9 @@ Run atomjump/index.html in your browser.  You should see a 'Click me for comment
 	must be placed anywhere in the `<body>` section.
 	 
 Note: jQuery ver 1.9.1 is used.  Other jQuery versions will likely work also.
+
 3. Adjust 'uniqueFeedbackId' value to a unique value to suit your feedback.  This can be unique per page or the same throughout the whole site.
+
 4. Obtain the 'myMachineUser' value by following the sub-steps below:
 
 	1. Settings
