@@ -16,7 +16,7 @@ You are most welcome to adjust the styling by making changes to the CSS file for
 
 1. With bower from within the root of your project path:
 
-    `bower install atomjump`
+**`bower install atomjump`**
 
 (Or unpack, and edit index.html, replace bootstrap css and javascript paths as mentioned with the comment version)
 
