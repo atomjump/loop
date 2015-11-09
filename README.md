@@ -18,11 +18,16 @@ You are most welcome to adjust the styling by making changes to the CSS file for
 
 **`bower install atomjump`**
 
-(Or unpack, and edit index.html, replace bootstrap css and javascript paths as mentioned)
+(Or without bower, unpack into your project, edit index.html, and replace bootstrap css and javascript paths as mentioned)
 
 Run atomjump/index.html in your browser.  You should see a 'Click me for comments' link. Click this to see the pop-up.
 
-2. Look carefully at the index.html example.
+
+
+
+# Setup Instructions
+
+1. Look carefully at the index.html example.
 
 	The code between
 	`<!-- AtomJump Feedback Starts -->`
@@ -41,9 +46,9 @@ Run atomjump/index.html in your browser.  You should see a 'Click me for comment
 	 
 Note: jQuery ver 1.9.1 is used.  Other jQuery versions will likely work also.
 
-3. Adjust 'uniqueFeedbackId' value to a unique value to suit your feedback.  This can be unique per page or the same throughout the whole site.
+2. Adjust 'uniqueFeedbackId' value to a unique value to suit your feedback.  This can be unique per page or the same throughout the whole site.
 
-4. Obtain the 'myMachineUser' value by following the sub-steps below:
+3. Obtain the 'myMachineUser' value by following the sub-steps below:
 
 	1. Settings
 	2. Entering an email/Password
@@ -54,7 +59,7 @@ Note: jQuery ver 1.9.1 is used.  Other jQuery versions will likely work also.
 
   This ensures only you as a logged in user will receive feedback from your site.
   
-5. If you wish to, you can enter your mobile phone number under Settings to receive SMS messages when there is any feedback
+4. If you wish to, you can enter your mobile phone number under Settings to receive SMS messages when there is any feedback
 (at a cost of 16c per message. Messages within 5 minutes of each other do not trigger an SMS).  If you want to 
 include an sms modify the myMachineUser string on your page to include the 3rd term 'sms'
 e.g. "123.456.123.32:1200:sms".  If you don't include an 'sms', you won't receive sms messages.
