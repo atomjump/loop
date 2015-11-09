@@ -27,7 +27,7 @@ Run atomjump/index.html in your browser.  You should see a 'Click me for comment
 
 # Setup Instructions
 
-1. Look carefully at the index.html example.
+Look carefully at the index.html example.
 
 The code between
 `<!-- AtomJump Feedback Starts -->`
@@ -46,9 +46,9 @@ must be placed anywhere in the `<body>` section.
 	 
 Note: jQuery ver 1.9.1 is used.  Other jQuery versions will likely work also.
 
-2. Adjust 'uniqueFeedbackId' value to a unique value to suit your feedback.  This can be unique per page or the same throughout the whole site.
+1. Adjust 'uniqueFeedbackId' value to a unique value to suit your feedback.  This can be unique per page or the same throughout the whole site.
 
-3. Obtain the 'myMachineUser' value by following the sub-steps below:
+2. Obtain the 'myMachineUser' value by following the sub-steps below:
 
 	1. Settings
 	2. Entering an email/Password
@@ -59,7 +59,7 @@ Note: jQuery ver 1.9.1 is used.  Other jQuery versions will likely work also.
 
   This ensures only you as a logged in user will receive feedback from your site.
   
-4. If you wish to, you can enter your mobile phone number under Settings to receive SMS messages when there is any feedback
+3. If you wish to, you can enter your mobile phone number under Settings to receive SMS messages when there is any feedback
 (at a cost of 16c per message. Messages within 5 minutes of each other do not trigger an SMS).  If you want to 
 include an sms modify the myMachineUser string on your page to include the 3rd term 'sms'
 e.g. "123.456.123.32:1200:sms".  If you don't include an 'sms', you won't receive sms messages.
