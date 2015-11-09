@@ -14,15 +14,12 @@ You are most welcome to adjust the styling by making changes to the CSS file for
 
 # Installation Instructions
 
-1. With bower from within the root of your project path:
-
+1. With [bower][bower.io] from within the root of your project path:
 **`bower install atomjump`**
-
-(Or unpack, and edit index.html, replace bootstrap css and javascript paths as mentioned with the comment version)
-
+(Or unpack, and edit index.html, replace bootstrap css and javascript paths as mentioned)
 Run atomjump/index.html in your browser.  You should see a 'Click me for comments' link. Click this to see the pop-up.
 
-2. Look carefully at the index.html example.  
+2. Look carefully at the index.html example.
 
 	The code between
 	`<!-- AtomJump Feedback Starts -->`
