@@ -14,7 +14,7 @@ You are most welcome to adjust the styling by making changes to the CSS file for
 
 # Installation Instructions
 
-1. With [bower](http://bower.io) from within the root of your project path:
+With [bower](http://bower.io) from within the root of your project path:
 
 **`bower install atomjump`**
 
@@ -29,20 +29,20 @@ Run atomjump/index.html in your browser.  You should see a 'Click me for comment
 
 1. Look carefully at the index.html example.
 
-	The code between
-	`<!-- AtomJump Feedback Starts -->`
-	 
-	 and
-	 `<!-- AtomJump Feedback Ends -->`
-	 
-	 should be put into your page's `<head>` section.
-	
-	Links can be added to the comments with
-	`<a class="comment-open" href="javascript:">Click me for comments</a>`
-	
-	The code 
-	`<div id="comment-holder"></div>`
-	must be placed anywhere in the `<body>` section.
+The code between
+`<!-- AtomJump Feedback Starts -->`
+ 
+ and
+ `<!-- AtomJump Feedback Ends -->`
+ 
+ should be put into your page's `<head>` section.
+
+Links can be added to the comments with
+`<a class="comment-open" href="javascript:">Click me for comments</a>`
+
+The code 
+`<div id="comment-holder"></div>`
+must be placed anywhere in the `<body>` section.
 	 
 Note: jQuery ver 1.9.1 is used.  Other jQuery versions will likely work also.
 
