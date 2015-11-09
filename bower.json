@@ -1,0 +1,33 @@
+{
+  "name": "atomjump",
+  "homepage": "https://atomjump.com",
+  "description": "AtomJump Loop smart feedback",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "AtomJump",
+    "Loop",
+    "smart",
+    "feedback",
+    "live",
+    "chat",
+    "mobile"
+  ],
+  "authors": [
+    "AtomJump.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": ">=3.3.1",
+    "jquery": ">=1.9.1"
+  }
+}
