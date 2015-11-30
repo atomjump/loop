@@ -14,30 +14,41 @@ You are most welcome to adjust the styling by making changes to the CSS file for
 
 # Installation Instructions
 
-1. Unpack into a web path. Run index.html in your browser.  You should see a 'Click me for comments' link. Click this to see the pop-up.
+With [bower](http://bower.io) from within the root of your project path:
 
-2. Look carefully at the index.html example.  
+**`bower install atomjump`**
 
-	The code between
-	`<!-- AtomJump Feedback Starts -->`
+(Or without bower, unpack into your project, edit index.html, and replace bootstrap css and javascript paths as mentioned)
+
+Run atomjump/index.html in your browser.  You should see a 'Click me for comments' link. Click this to see the pop-up.
+
+
+
+
+# Setup Instructions
+
+Look carefully at the index.html example.
+
+The code between
+`<!-- AtomJump Feedback Starts -->`
+ 
+ and
+ `<!-- AtomJump Feedback Ends -->`
+ 
+ should be put into your page's `<head>` section.
+
+Links can be added to the comments with
+`<a class="comment-open" href="javascript:">Click me for comments</a>`
+
+The code 
+`<div id="comment-holder"></div>`
+must be placed anywhere in the `<body>` section.
 	 
-	 and
-	 `<!-- AtomJump Feedback Ends -->`
-	 
-	 should be put into your page's `<head>` section.
-	
-	Links can be added to the comments with
-	`<a class="comment-open" href="javascript:">Click me for comments</a>`
-	
-	The code 
-	`<div id="comment-holder"></div>`
-	must be placed anywhere in the `<body>` section.
-	
-3. Copy the contents of /css into your own css path and adjust any references to suit your project's path.
-4. Copy the contents of /js into your own js path and adjust any references to suit your project's path. 
 Note: jQuery ver 1.9.1 is used.  Other jQuery versions will likely work also.
-5. Adjust 'uniqueFeedbackId' value to a unique value to suit your feedback.  This can be unique per page or the same throughout the whole site.
-6. Obtain the 'myMachineUser' value by following the sub-steps below:
+
+1. Adjust 'uniqueFeedbackId' value to a unique value to suit your feedback.  This can be unique per page or the same throughout the whole site.
+
+2. Obtain the 'myMachineUser' value by following the sub-steps below:
 
 	1. Settings
 	2. Entering an email/Password
@@ -48,7 +59,7 @@ Note: jQuery ver 1.9.1 is used.  Other jQuery versions will likely work also.
 
   This ensures only you as a logged in user will receive feedback from your site.
   
-7. If you wish to, you can enter your mobile phone number under Settings to receive SMS messages when there is any feedback
+3. If you wish to, you can enter your mobile phone number under Settings to receive SMS messages when there is any feedback
 (at a cost of 16c per message. Messages within 5 minutes of each other do not trigger an SMS).  If you want to 
 include an sms modify the myMachineUser string on your page to include the 3rd term 'sms'
 e.g. "123.456.123.32:1200:sms".  If you don't include an 'sms', you won't receive sms messages.
