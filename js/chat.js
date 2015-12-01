@@ -20,13 +20,11 @@ var ssshoutHasFocusOuter = true;
 var myLoopTimeout;
 var whisperOften = "1.1.1.1:2"; //defaults to admin user's ip and id
 var cs = 2438974;
-if(window.location.hostname.match('staging')){			//added window.
-	var ssshoutServer = "https://staging.atomjump.com";
-} else {
-	var ssshoutServer = "https://atomjump.com";  //https://atomjump.com  normally, https://staging.atomjump.com during testing
-}
+var ssshoutServer = "https://atomjump.com";  //https://atomjump.com  normally, https://staging.atomjump.com during testing
 var myUrl = window.location.href;
 var emailCheck;
+var cssFeedback = "";
+var cssBootstrap = "";
 
 
 
@@ -34,7 +32,16 @@ function initAtomJumpFeedback(params)
 {
 	commentLayer = params.uniqueFeedbackId;
 	whisperOften = params.myMachineUser;
-	
+	if(params.server){
+	  ssshoutServer = params.server;
+ }
+ if(params.cssFeedback) {
+   cssFeedback = params.cssFeedback;
+ }
+ if(params.cssBootstrap) {
+   cssBoostrap = params.cssBootstrap;
+ }
+
 
 }
 
@@ -145,7 +152,7 @@ $(document).ready(function() {
 						
 						//alert('serv:' + ssshoutServer + ' wid' + wid + ' hei' + hei + ' lAYER' + commentLayer + ' WHIS' + whisperOften + ' MYuRL' + myUrl);
 						
-						$("#comment-in-here").html('<iframe id="comment-iframe" src="' + ssshoutServer + '/search-secure.php?width=' + wid + '&height=' + hei + '&uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&clientremoteurl=' + encodeURIComponent(myUrl) + '" frameBorder="0" scrolling="no" width="' + wid + '" height="' + hei + '" onload="$(\'#comment-loading\').hide();" allowfullscreen></iframe>');
+						$("#comment-in-here").html('<iframe id="comment-iframe" src="' + ssshoutServer + '/search-secure.php?width=' + wid + '&height=' + hei + '&uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&cssFeedback=' + cssFeedback + '&cssBootstrap=' + cssBootstrap + '&server=' + ssshoutServer + '&clientremoteurl=' + encodeURIComponent(myUrl) + '" frameBorder="0" scrolling="no" width="' + wid + '" height="' + hei + '" onload="$(\'#comment-loading\').hide();" allowfullscreen></iframe>');
 						
 					
 					});
