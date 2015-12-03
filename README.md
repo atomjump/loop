@@ -91,11 +91,11 @@ e.g. "123.456.123.32:1200:sms,123.456.123.32:1201:sms"
 
 Add 
 
-```"cssBootstrap":"relative/url"```
+"cssBootstrap":"relative/url"
 
 and
 
-```"cssFeedback":"relative/url/to/your/css"```
+"cssFeedback":"relative/url/to/your/css"
 
 to the ajFeedback object.
 
