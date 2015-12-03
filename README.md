@@ -87,6 +87,21 @@ Open the feedback forum in your browser.
 e.g. "123.456.123.32:1200:sms,123.456.123.32:1201:sms"
 
 
+# To change the theme
+
+Add 
+
+```"cssBootstrap":"relative/url"```
+
+and
+
+```"cssFeedback":"relative/url/to/your/css"```
+
+to the ajFeedback object.
+
+Note: your css file must be on an https server.
+
+
 # To download a forum's messages programmatically
 
 **Endpoint**

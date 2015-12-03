@@ -20,11 +20,11 @@ var ssshoutHasFocusOuter = true;
 var myLoopTimeout;
 var whisperOften = "1.1.1.1:2"; //defaults to admin user's ip and id
 var cs = 2438974;
-var ssshoutServer = "https://atomjump.com";  //https://atomjump.com  normally, https://staging.atomjump.com during testing
+var ssshoutServer = "https://atomjump.com";  //https://atomjump.com  normally
 var myUrl = window.location.href;
 var emailCheck;
 var cssFeedback = "";
-var cssBootstrap = "";
+var cssStrap = "";
 
 
 
@@ -39,7 +39,7 @@ function initAtomJumpFeedback(params)
    cssFeedback = params.cssFeedback;
  }
  if(params.cssBootstrap) {
-   cssBoostrap = params.cssBootstrap;
+   cssStrap = params.cssBootstrap;
  }
 
 
@@ -150,9 +150,8 @@ $(document).ready(function() {
 						var wid = ($("#comment-in-here").width() - 5);		//5 is to ensure scroll bar always accounted for
 						var hei = ($("#comment-popup-text-container").height() - 10);
 						
-						//alert('serv:' + ssshoutServer + ' wid' + wid + ' hei' + hei + ' lAYER' + commentLayer + ' WHIS' + whisperOften + ' MYuRL' + myUrl);
-						
-						$("#comment-in-here").html('<iframe id="comment-iframe" src="' + ssshoutServer + '/search-secure.php?width=' + wid + '&height=' + hei + '&uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&cssFeedback=' + cssFeedback + '&cssBootstrap=' + cssBootstrap + '&server=' + ssshoutServer + '&clientremoteurl=' + encodeURIComponent(myUrl) + '" frameBorder="0" scrolling="no" width="' + wid + '" height="' + hei + '" onload="$(\'#comment-loading\').hide();" allowfullscreen></iframe>');
+								
+						$("#comment-in-here").html('<iframe id="comment-iframe" src="' + ssshoutServer + '/search-secure.php?width=' + wid + '&height=' + hei + '&uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&cssFeedback=' + encodeURIComponent(cssFeedback) + '&cssBootstrap=' + encodeURIComponent(cssStrap) + '&server=' + encodeURIComponent(ssshoutServer) + '&clientremoteurl=' + encodeURIComponent(myUrl) + '" frameBorder="0" scrolling="no" width="' + wid + '" height="' + hei + '" onload="$(\'#comment-loading\').hide();" allowfullscreen></iframe>');
 						
 					
 					});
