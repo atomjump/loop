@@ -5,7 +5,9 @@
 	Contact: peter AT atomjump.com
 */
 
-
+.comment-popup-body {
+   background-color: #fff; 
+}
 
 #comment-loading {
 	width: 28px; 
