@@ -20,7 +20,7 @@ var ssshoutHasFocusOuter = true;
 var myLoopTimeout;
 var whisperOften = "1.1.1.1:2"; //defaults to admin user's ip and id
 var cs = 2438974;
-var ssshoutServer = "https://atomjump.com";  //https://atomjump.com  normally
+var ssshoutServer = "https://atomjump.com/api";  //https://atomjump.com/api  normally
 var myUrl = window.location.href;
 var emailCheck;
 var cssFeedback = "";
