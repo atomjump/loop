@@ -21,6 +21,7 @@ var myLoopTimeout;
 var whisperOften = "1.1.1.1:2"; //defaults to admin user's ip and id
 var cs = 2438974;
 var ssshoutServer = "https://atomjump.com/api";  //https://atomjump.com/api  normally
+var emailPlugin = "/plugins/shortmail/index.php";
 var myUrl = window.location.href;
 var emailCheck;
 var cssFeedback = "";
@@ -51,7 +52,7 @@ function updateEmail()
 
 	//Run a refresh on the server side	
 	 $.ajax({
-		url: ssshoutServer + "/mail-cron.php?callback=?", 
+		url: ssshoutServer + emailPlugin + "?callback=?", 
 		data: "refresh=" + commentLayer,
 		crossDomain: true,
 		dataType: "jsonp"
