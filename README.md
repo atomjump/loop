@@ -107,7 +107,7 @@ Note: your css file must be on an https server.
 # To download a forum's messages programmatically
 
 **Endpoint**
-https://atomjump.com/download.php
+https://atomjump.com/api/download.php
 
 **Parameters**
 
