@@ -1,3 +1,23 @@
+//Language & messages configuration
+//Note: also see /config/messages.json for further messages configuration
+var lsmsg = {
+    "defaultLanguage" : "en",
+    "msgs": {
+        "en":{
+              privateMessage: 'Private Message',
+              settings: 'Settings',
+              uploadImagesTitle: 'Upload images or video.',
+              uploadImagesTitleSorry: 'Sorry image uploads are only supported on IE10+, or any other browser.',
+              sendTo: 'Send to'
+        },
+        "de":{
+        }       
+    }
+}
+var lang = lsmsg.defaultLanguage; 
+
+
+
 function myTrim(x)
 {
 	return x.replace(/^\s+|\s+$/gm,'');
@@ -79,9 +99,9 @@ $(document).ready(function() {
 			
 			//If IE10 or above, or any other browser
 			if(window.atob) {
-				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a id="comment-upload-popup" style="padding: 3px;" href="javascript:"><img title="Upload images or video." src="' + ssshoutServer + '/images/upload.png"></a></span>';
+				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a id="comment-upload-popup" style="padding: 3px;" href="javascript:"><img title="' + lsmsg.msgs[lang].uploadImagesTitle + '" src="' + ssshoutServer + '/images/upload.png"></a></span>';
 			} else {
-				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a style="padding: 3px;" href="javascript:"><img title="Sorry image uploads are only supported on IE10+, or any other browser." src="' + ssshoutServer + '/images/noupload.png"></a></span>';
+				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a style="padding: 3px;" href="javascript:"><img title="' + lsmsg.msgs[lang].uploadImagesTitleSorry + '" src="' + ssshoutServer + '/images/noupload.png"></a></span>';
 			}
 			
 			$("#comment-holder").html('<div id="comment-popup-container" style="width:'+screenWidth+'px; height: '+screenHeight+'px" >\
@@ -102,7 +122,7 @@ $(document).ready(function() {
 			 				</div>\
 			 		 	</div>\
 				 		 <div id="comment-key">\
-				 			 <span class="comment-settings" style=""><a id="comment-options-popup" style="padding: 3px;" href="javascript:"><img src="' + ssshoutServer + '/images/settings.png">&nbsp;Settings</a></span>' + uploadStr + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-private-key">Private Message</span>\
+				 			 <span class="comment-settings" style=""><a id="comment-options-popup" style="padding: 3px;" href="javascript:"><img src="' + ssshoutServer + '/images/settings.png">&nbsp;' + lsmsg.msgs[lang].settings + '</a></span>' + uploadStr + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-private-key">' + lsmsg.msgs[lang].privateMessage + '</span>\
 				 		</div>\
 					</div>\
 			 </div>\
@@ -227,7 +247,7 @@ $(document).ready(function() {
 function whisper(whisper_to, targetName)
 {
 	whisperOften = whisper_to;		//set global
-	$('#private-button').html("Send to " + targetName);
+	$('#private-button').html(lsmsg.msgs[lang].sendTo + " " + targetName);
 
 }
 
