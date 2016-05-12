@@ -10,8 +10,13 @@ var lsmsg = {
               uploadImagesTitleSorry: 'Sorry image uploads are only supported on IE10+, or any other browser.',
               sendTo: 'Send to'
         },
-        "de":{
-        }       
+        "es":{
+              privateMessage: 'Mensaje Privado',
+              settings: 'Settings',
+              uploadImagesTitle: 'Sube imágenes o vídeo.',
+              uploadImagesTitleSorry: 'La subida de imágenes Lo siento, sólo se admiten en IE10+, o cualquier otro navegador.',
+              sendTo: 'Enviar a'
+        }      
     }
 }
 var lang = lsmsg.defaultLanguage; 
@@ -94,7 +99,10 @@ if(typeof ajFeedback !== 'undefined') {
 $(document).ready(function() {
 			var screenWidth = $(window).width();
 			var screenHeight = $(window).height();
-			
+			var setLang = getCookie("lang");
+			if(setLang) {
+			    lang = setLang;			
+			}
 			
 			
 			//If IE10 or above, or any other browser
