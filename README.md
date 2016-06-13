@@ -69,7 +69,7 @@ e.g. "123.456.123.32:1200:sms".  If you don't include an 'sms', you won't receiv
 If you wish to send SMS messages, we will keep track of messages sent, and charge independently based on usage, on a monthly basis.
 
 
-# To have more than one feedback forum on a single page
+# To have more than one messaging forum on a single page
 
 Add the following data tags, and enter your own names/ips:
 ```<a class="comment-open" data-uniquefeedbackid="my_different_forum_name" data-mymachineuser="10.12.13.14:2" href="javascript:">Open special forum</a>```
