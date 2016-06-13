@@ -1,9 +1,9 @@
 <img src="https://atomjump.com/images/logo80.png">
 
 # loop
-**Smart Feedback**
+**Open Messaging**
 
-This tool provides a 'WhatsApp-like' group discussion forum from a popup on your website. It is ideal for feedback, but can also be used as a live discussion tool, or a CRM.  We actually run our entire operation off one page with several of these popups on it.
+This tool provides a 'WhatsApp-like' group discussion forum from a popup on your website. It is good for feedback, but can also be used as a live discussion tool, or a CRM.  We actually run our entire operation off one page with several of these popups on it.
 
 The client software is entirely Javascript and CSS, but it refers to an AtomJump server to store messages (this is optionally available as a separate project at http://github.com/atomjump/loop-server, or by default you can use the AtomJump.com server).  Supported platforms: IE8 upwards, Chrome, Firefox, Safari, Android Native, Android Chrome, Android Firefox, iPad, iPhone, Opera. There may be other supported platforms we haven't tested on.
 
@@ -75,9 +75,9 @@ Add the following data tags, and enter your own names/ips:
 ```<a class="comment-open" data-uniquefeedbackid="my_different_forum_name" data-mymachineuser="10.12.13.14:2" href="javascript:">Open special forum</a>```
 
 
-# To add more than one user to receive feedback
+# To add more than one user to receive messages
 
-Open the feedback forum in your browser.
+Open the messaging forum in your browser.
 
 1. Settings
 2. Entering an email/Password
