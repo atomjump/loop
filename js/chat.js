@@ -74,15 +74,20 @@ function initAtomJumpFeedback(params)
 
 function updateEmail()
 {
+	//Check if any custom user/passwords which have been entered in this session
+	var custom = "";
+	if((customUser) && (customPass)) {
+		custom = "&u=" + encodeURIComponent(customUser) + "&p=" + encodeURIComponent(customPass) + "&w=" + encodeURIComponent(customWhisper) + "&fe=" + encodeURIComponent(customFeed) + "&fr=" + customFreq + "&mail_id=" + customMailId;
+	}
 
 	//Run a refresh on the server side	
 	 $.ajax({
 		url: ssshoutServer + emailPlugin + "?callback=?", 
-		data: "refresh=" + commentLayer,
+		data: "refresh=" + commentLayer + custom,
 		crossDomain: true,
 		dataType: "jsonp"
 	}).done(function(response) {
-		//alert('refreshed');
+		//Refreshed
 	});
 
 }
@@ -155,11 +160,7 @@ $(document).ready(function() {
 							
 							
 						}
-						/*if($(this).data('feedrefresh')) {
-							//Run a refresh on the server side	
-							$.ajax(url: ssshoutServer + "/feed-cron.php?refresh=" + commentLayer, 
-									dataType: "jsonp");
-						}*/
+						
 					}
 					
 					var screenWidth = $(window).width();
