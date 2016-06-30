@@ -76,7 +76,7 @@ function updateEmail()
 {
 	//Check if any custom user/passwords which have been entered in this session
 	var custom = "";
-	if((customUser) && (customPass)) {
+	if((typeof customUser !== 'undefined') && (typeof customPass !== 'undefined')) {
 		custom = "&u=" + encodeURIComponent(customUser) + "&p=" + encodeURIComponent(customPass) + "&w=" + encodeURIComponent(customWhisper) + "&fe=" + encodeURIComponent(customFeed) + "&fr=" + customFreq + "&mail_id=" + customMailId;
 	}
 
