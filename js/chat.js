@@ -4,18 +4,20 @@ var lsmsg = {
     "defaultLanguage" : "en",
     "msgs": {
         "en":{
-              privateMessage: 'Private Message',
+              privateMessage: 'Private',
               settings: 'Settings',
               uploadImagesTitle: 'Upload images or video.',
               uploadImagesTitleSorry: 'Sorry image uploads are only supported on IE10+, or any other browser.',
-              sendTo: 'Send to'
+              sendTo: 'Send to',
+              emoticonsTitle: 'Emoticons'
         },
         "es":{
-              privateMessage: 'Mensaje Privado',
+              privateMessage: 'Privado',
               settings: 'Settings',
               uploadImagesTitle: 'Sube imágenes o vídeo.',
               uploadImagesTitleSorry: 'La subida de imágenes Lo siento, sólo se admiten en IE10+, o cualquier otro navegador.',
-              sendTo: 'Enviar a'
+              sendTo: 'Enviar a',
+              emoticonsTitle: 'Emoticonos'
         }      
     }
 }
@@ -117,6 +119,8 @@ $(document).ready(function() {
 				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a style="padding: 3px;" href="javascript:"><img title="' + lsmsg.msgs[lang].uploadImagesTitleSorry + '" src="' + ssshoutServer + '/images/noupload.png"></a></span>';
 			}
 			
+			var emoticonsStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a  id="comment-emoji-popup" style="padding: 3px;" href="javascript:"><img title="' + lsmsg.msgs[lang].emoticonsTitle + '" src="' + ssshoutServer + '/images/emoticons.png"></a></span>';
+			
 			$("#comment-holder").html('<div id="comment-popup-container" style="width:'+screenWidth+'px; height: '+screenHeight+'px" >\
 				<div id="comment-popup" class="comment-popup-style">\
 			 	  <div class="comment-padding">\
@@ -135,7 +139,7 @@ $(document).ready(function() {
 			 				</div>\
 			 		 	</div>\
 				 		 <div id="comment-key">\
-				 			 <span class="comment-settings" style=""><a id="comment-options-popup" style="padding: 3px;" href="javascript:"><img src="' + ssshoutServer + '/images/settings.png">&nbsp;' + lsmsg.msgs[lang].settings + '</a></span>' + uploadStr + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-private-key">' + lsmsg.msgs[lang].privateMessage + '</span>\
+				 			 <span class="comment-settings" style=""><a id="comment-options-popup" style="padding: 3px;" href="javascript:"><img src="' + ssshoutServer + '/images/settings.png">&nbsp;' + lsmsg.msgs[lang].settings + '</a></span>' + uploadStr + emoticonsStr + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-private-key">' + lsmsg.msgs[lang].privateMessage + '</span>\
 				 		</div>\
 					</div>\
 			 </div>\
@@ -238,6 +242,15 @@ $(document).ready(function() {
 					//Tell iframe to switch content
 					var receiver =  document.getElementById('comment-iframe').contentWindow;
 					receiver.postMessage('upload', ssshoutServer);
+				
+
+				
+				});
+				
+				$('#comment-emoji-popup').click(function() {
+					//Tell iframe to switch content
+					var receiver =  document.getElementById('comment-iframe').contentWindow;
+					receiver.postMessage('emojis', ssshoutServer);
 				
 
 				

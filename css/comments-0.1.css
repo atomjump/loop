@@ -167,24 +167,18 @@ button:focus {
 	z-index: 4200;
 }
 
-#comment-options {
+
+
+.comment-frm-scroller {
 	display: none;
 	
 	-webkit-overflow-scrolling: touch;		
-	overflow-y: auto;
+	overflow-y: scroll; /* was auto */
 	padding-right: 4px;	/* added for slight margin */
 
 }
 
 
-#comment-upload {
-	display: none;
-	
-	-webkit-overflow-scrolling: touch;		
-	overflow-y: auto;
-	padding-right: 4px;	/* added for slight margin */
-
-}
 
 
 #comment-prev-messages {
