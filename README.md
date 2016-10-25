@@ -153,7 +153,7 @@ https://atomjump.com
 AtomJump and Wordpress - use the 'Header and Footer' plugin.
 Under the plugin->settings:
 
-In the '<HEAD> SECTION INJECTION':
+In the 'HEAD SECTION':
 
 ```
 <!-- Bootstrap Core CSS -->
@@ -179,8 +179,13 @@ In the '<HEAD> SECTION INJECTION':
 ```
 
 
-BEFORE THE </BODY> CLOSING TAG (FOOTER):
+BEFORE THE BODY CLOSING TAG (FOOTER):
 
 ```
 <div id="comment-holder"></div><!-- holds the popup comments.-->
+```
+
+And then add the 'comment-open' tag to any link:
+```
+<a class="comment-open" href="javascript:">Click me for comments</a>
 ```
