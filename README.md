@@ -157,7 +157,7 @@ In the '<HEAD> SECTION INJECTION':
 
 ```
 <!-- Bootstrap Core CSS -->
-<link href="https://atomjump.com/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://atomjump.com/css/bootstrap.min.css" rel="stylesheet">
 
 
 <!-- AtomJump Feedback CSS -->
