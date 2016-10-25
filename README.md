@@ -24,6 +24,7 @@ With [bower](http://bower.io) from within the root of your project path:
 
 Run atomjump/index.html in your browser.  You should see a 'Click me for comments' link. Click this to see the pop-up.
 
+If you use Wordpress, see the Wordpress instructions below.
 
 
 
@@ -145,3 +146,41 @@ Note: it can take up to 1 minute before any new message's sentiment will be calc
 For more details see
 https://atomjump.com
 
+
+
+# Wordpress Installation
+
+AtomJump and Wordpress - use the 'Header and Footer' plugin.
+Under the plugin->settings:
+
+In the '<HEAD> SECTION INJECTION':
+
+```
+<!-- Bootstrap Core CSS -->
+<link href="https://atomjump.com/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- AtomJump Feedback CSS -->
+<link rel="StyleSheet" href="https://atomjump.com/css/comments-0.1.css">
+
+<!-- Bootstrap HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+	var ajFeedback = {
+				"uniqueFeedbackId" : "your_globally_unique_forum_name",
+				"myMachineUser" : "111.69.60.34:34",		//Use your machineUser
+
+				"server": "https://atomjump.com/api"				}
+</script>
+<script type="text/javascript" src="https://atomjump.com/js/chat-wordpress.js"></script>
+```
+
+
+BEFORE THE </BODY> CLOSING TAG (FOOTER):
+
+```
+<div id="comment-holder"></div><!-- holds the popup comments.-->
+```
