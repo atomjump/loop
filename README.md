@@ -24,8 +24,6 @@ With [bower](http://bower.io) from within the root of your project path:
 
 Run atomjump/index.html in your browser.  You should see a 'Click me for comments' link. Click this to see the pop-up.
 
-If you use Wordpress, see the Wordpress instructions below.
-
 
 
 # Setup Instructions
