@@ -65,6 +65,7 @@ var myLoopTimeout;
 var whisperOften = "1.1.1.1:2"; //defaults to admin user's ip and id
 var cs = 2438974;
 var ssshoutServer = "https://atomjump.com/api";  //https://atomjump.com/api  normally
+var sameDomain = "atomjump.com";		//string in url to signify this is the same domain (for Safari cross-domain check)
 var emailPlugin = "/plugins/shortmail/index.php";
 var myUrl = window.location.href;
 var emailCheck;
@@ -176,11 +177,13 @@ $(document).ready(function() {
 					//save this knowledge in a local cookie)
 					//From then onwards, we just open all the way				
 					var is_safari = navigator.userAgent.indexOf("Safari") > -1;
-					if(is_safari) {
-						var firstView = getCookie("safari-first-view");
-						if(!firstView) {
-								var myWindow = window.open(ssshoutServer + "/init-sessions.php", "", "width=1,height=1");
-								document.cookie = 'safari-first-view=false; path=/; expires=' + cookieOffset() + ';';
+					if(myUrl.indexOf(sameDomain) == -1) { 
+						if(is_safari) {
+							var firstView = getCookie("safari-first-view");
+							if(!firstView) {
+									var myWindow = window.open(ssshoutServer + "/init-sessions.php", "", "width=1,height=1");
+									document.cookie = 'safari-first-view=false; path=/; expires=' + cookieOffset() + ';';
+							}
 						}
 					}
 					
