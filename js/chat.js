@@ -32,15 +32,32 @@ function myTrim(x)
 
 function getCookie(cname)
 {
-var name = cname + "=";
-var ca = document.cookie.split(';');
-for(var i=0; i<ca.length; i++)
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++)
+	{
+		var c = myTrim(ca[i]);// ie8 didn't support .trim();
+		if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+	}
+	return "";
+}
+
+function cookieOffset()
 {
-	var c = myTrim(ca[i]);// ie8 didn't support .trim();
-	if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+  //Should output: Thu,31-Dec-2020 00:00:00 GMT
+  var cdate = new Date;
+  var expirydate=new Date();
+  expirydate.setTime(expirydate.getTime()+(365*3*60*60*24*1000))
+  var write = expirydate.toGMTString();
+  
+  return write;
 }
-return "";
+
+function isMacintosh() {
+  return navigator.platform.indexOf('Mac') > -1;
 }
+
+
 var commentLayer="comments";
 var ssshoutFreq = 5000;
 var ssshoutHasFocusOuter = true;
@@ -153,10 +170,21 @@ $(document).ready(function() {
 					//Dynamically readjust window to current screen height
 					
 					
-					//Bring up a popup window (TODO conditionally if Safari desktop only)
+					//Bring up a popup window (if Safari desktop only)
 					//to ensure that we have the security permissions to set the session
-					//for the iframe
-					var myWindow = window.open(ssshoutServer + "/init-sessions.php", "", "width=200,height=100");
+					//from within the iframe. But only do this the first time (and
+					//save this knowledge in a local cookie)
+					//From then onwards, we just open all the way				
+					if(isMacintosh()) {
+						var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+						if(is_safari) {
+							var firstView = getCookie("safari-first-view");
+							if(!firstView) {
+									var myWindow = window.open(ssshoutServer + "/init-sessions.php", "", "width=1,height=1");
+									document.cookie = 'safari-first-view=false; path=/; expires=' + cookieOffset() + ';';
+							}
+						}
+					}					
 					
 					
 					
