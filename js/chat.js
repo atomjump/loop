@@ -175,16 +175,14 @@ $(document).ready(function() {
 					//from within the iframe. But only do this the first time (and
 					//save this knowledge in a local cookie)
 					//From then onwards, we just open all the way				
-					if(isMacintosh()) {
-						var is_safari = navigator.userAgent.indexOf("Safari") > -1;
-						if(is_safari) {
-							var firstView = getCookie("safari-first-view");
-							if(!firstView) {
-									var myWindow = window.open(ssshoutServer + "/init-sessions.php", "", "width=1,height=1");
-									document.cookie = 'safari-first-view=false; path=/; expires=' + cookieOffset() + ';';
-							}
+					var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+					if(is_safari) {
+						var firstView = getCookie("safari-first-view");
+						if(!firstView) {
+								var myWindow = window.open(ssshoutServer + "/init-sessions.php", "", "width=1,height=1");
+								document.cookie = 'safari-first-view=false; path=/; expires=' + cookieOffset() + ';';
 						}
-					}					
+					}
 					
 					
 					
