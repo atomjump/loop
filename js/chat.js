@@ -176,10 +176,10 @@ $(document).ready(function() {
 					//from within the iframe. But only do this the first time (and
 					//save this knowledge in a local cookie)
 					//From then onwards, we just open all the way
-					var isMacLike = navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i)?true:false;				
+					var isMacLike = navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i) ? true:false;				
 					var is_safari = navigator.userAgent.indexOf("Safari") > -1;
 					if(myUrl.indexOf(sameDomain) == -1) { 
-						if(is_safari && isMacLike) {
+						if((is_safari) && (isMacLike == true)) {
 							var firstView = getCookie("safari-first-view");
 							if(!firstView) {
 									var myWindow = window.open(ssshoutServer + "/init-sessions.php", "", "width=1,height=1");
