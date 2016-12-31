@@ -152,6 +152,14 @@ $(document).ready(function() {
 				$('.comment-open').click(function() {
 					//Dynamically readjust window to current screen height
 					
+					
+					//Bring up a popup window (TODO conditionally if Safari desktop only)
+					//to ensure that we have the security permissions to set the session
+					//for the iframe
+					var myWindow = window.open(ssshoutServer + "/init-sessions.php", "", "width=200,height=100");
+					
+					
+					
 					if($(this).data('uniquefeedbackid')) {
 						//If we have a unique feedback id for this link in the data properties, rest the globals.
 						commentLayer = $(this).data('uniquefeedbackid');
