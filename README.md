@@ -22,7 +22,7 @@ With [bower](http://bower.io) from within the root of your project path:
 
 (Or without bower, unpack into your project, edit index.html, and replace bootstrap css and javascript paths as mentioned)
 
-Run atomjump/index.html in your browser.  You should see a 'Click me for comments' link. Click this to see the pop-up.
+Run atomjump/index.html in your browser.  You should see a 'Click me for comments' link. Click this to see the pop-up. For Wordpress instructions, see below.
 
 
 
@@ -70,8 +70,17 @@ If you wish to send SMS messages, we will keep track of messages sent, and charg
 
 # To have more than one messaging forum on a single page
 
-Add the following data tags, and enter your own names/ips:
+You can do this three different ways. The simplest is to set the link's href to '"#comment-open-' followed by the forum name:
+```<a href="#comment-open-my_different_forum_name">Open special forum</a>```
+
+Or, you can add the 'comment-open' class to a link with an 'id' referring to the forum name:
+```<a class="comment-open" id="my_different_forum_name" href="javascript:">Open special forum</a>```
+
+Or, for further control over the owner of the forum, you can add the following data tags, and enter your own names/ips:
 ```<a class="comment-open" data-uniquefeedbackid="my_different_forum_name" data-mymachineuser="10.12.13.14:2" href="javascript:">Open special forum</a>```
+
+
+
 
 
 # To add more than one user to receive messages
@@ -139,6 +148,64 @@ Include the following parameters along with 1,2, and 3 above.
 The response will be an average over the last period of all the message sentiment values.
 This will be expressed as a single number eg. 5.324.
 Note: it can take up to 1 minute before any new message's sentiment will be calculated.
+
+
+
+# Wordpress set-up
+
+
+1. Install the 'Header and Footer' plugin.
+2. Install AtomJump using 'bower' as described above in your Wordpress folder. 
+3. Go into 'Settings->Header and Footer', and enter these two sections (adjusting any paths required to fit your installation)
+
+* In the '<HEAD> SECTION INJECTION' section:
+
+```
+<!-- AtomJump Feedback Starts -->
+		   <!-- Bootstrap core CSS. Ver 3.3.1 sits in css/bootstrap.min.css -->
+			  <link rel="StyleSheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+			
+			<!-- AtomJump Feedback CSS -->
+			<link rel="StyleSheet" href="/bower_components/atomjump/css/comments-0.9.1.css?ver=1">
+			
+			<!-- Bootstrap HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+			<!--[if lt IE 9]>
+			  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			<![endif]-->
+			
+			<!-- Include your version of jQuery here.  Version 1.9.1 is tested with AtomJump Feedback and sits in js/jquery.min.js -->
+			<!--<script type="text/javascript" src="../jquery/dist/jquery.js"></script>--> 
+			<!-- Took from here 15 May 2014: http://ajax.googleapis.com/ajax/libs/jquery/1.9.1 -->
+			
+			<script>
+				//Add your configuration here for AtomJump Feedback
+				var ajFeedback = {
+					"uniqueFeedbackId" : "test_feedback",		//This can be anything globally unique to your company/page	
+					"myMachineUser" : "92.27.10.17:8",			/* Obtain this value from 1. Settings
+																					2. Entering an email/Password
+																					3. Click save
+																					4. Settings
+																					5. Clicking: 'More', then 'Developer Tools'
+																					6. Copy the myMachineUser into here.
+							
+															*/
+						"server":  "https://atomjump.com/api"
+				}
+			</script>
+			<script type="text/javascript" src="/bower_components/atomjump/js/chat.js"></script>
+<!-- AtomJump Feedback Ends -->
+```
+
+* In the 'BEFORE THE </BODY> CLOSING TAG (FOOTER)' section:
+
+```
+<!-- Any link on the page can start with '#comment-open-', followed by the forum name and it will open a popup -->
+<div id="comment-holder"></div><!-- holds the popup comments. Can be anywhere between the <body> tags -->
+```
+
+4. Any link's address (i.e. the 'href') on the page can now start with '#comment-open-', followed by the forum name and it will open a popup.
+
 
 
 For more details see

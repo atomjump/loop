@@ -250,16 +250,6 @@ button:focus {
 }
 
 
-#comment-key {
-	
-	position: absolute;
-	bottom: 0px;
-	left: 10px;
-	z-index:5000;
-	width:100%;	
-
-}
-
 
 
 #comment-pop-title {
@@ -378,18 +368,47 @@ img {
 }
 
 
-.comment-settings {
-
-	position: relative;
+#comment-key {
+	
+	position: absolute;
 	bottom: 0px;
-	padding: 3px;
+	left: 10px;
+	z-index:5000;
+	width:100%;	
+	display: inline-block;
+	white-space: nowrap;
+	float: left;
 }
 
+.comment-settings a {
+	white-space: nowrap;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+}
+
+.comment-settings img {
+	margin: 0px;
+	padding: 0px;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+
+.comment-settings {
+	bottom: 0px;
+	height: 16px;
+	display: inline-block;
+	white-space: nowrap;
+	margin-right: 10px;
+}
+
+
+
 .comment-private-key {
-	position: relative; 
 	bottom: 0px; 
 	background-color: #d9edf7; 
-	padding: 3px;
+    padding: 3px;
 
 }
 
