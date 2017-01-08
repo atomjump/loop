@@ -151,7 +151,7 @@ Note: it can take up to 1 minute before any new message's sentiment will be calc
 
 
 
-# Wordpress set-up
+# Wordpress Setup
 
 
 1. Install the 'Header and Footer' plugin.
