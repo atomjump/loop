@@ -156,9 +156,10 @@ Note: it can take up to 1 minute before any new message's sentiment will be calc
 
 1. Install the 'Header and Footer' plugin.
 2. Install AtomJump using 'bower' as described above in your Wordpress folder. 
-3. Go into 'Settings->Header and Footer', and enter these two sections (adjusting any paths required to fit your installation)
+3. Go into 'Settings->Header and Footer', and enter the two sections below (adjusting any paths required to fit your installation)
+4. Any link's address (i.e. the 'href') on the page can now start with '#comment-open-', followed by the forum name and it will open a popup.
 
-* In the '<HEAD> SECTION INJECTION' section:
+* Copy into the '<HEAD> SECTION INJECTION' section:
 
 ```
 <!-- AtomJump Feedback Starts -->
@@ -193,14 +194,14 @@ Note: it can take up to 1 minute before any new message's sentiment will be calc
 <!-- AtomJump Feedback Ends -->
 ```
 
-* In the 'BEFORE THE </BODY> CLOSING TAG (FOOTER)' section:
+* Copy into the 'BEFORE THE </BODY> CLOSING TAG (FOOTER)' section:
 
 ```
 <!-- Any link on the page can start with '#comment-open-', followed by the forum name and it will open a popup -->
 <div id="comment-holder"></div><!-- holds the popup comments. Can be anywhere between the <body> tags -->
 ```
 
-4. Any link's address (i.e. the 'href') on the page can now start with '#comment-open-', followed by the forum name and it will open a popup.
+
 
 
 
