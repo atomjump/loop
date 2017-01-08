@@ -174,12 +174,8 @@ Note: it can take up to 1 minute before any new message's sentiment will be calc
 			  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 			<![endif]-->
 			
-			<!-- Include your version of jQuery here.  Version 1.9.1 is tested with AtomJump Feedback and sits in js/jquery.min.js -->
-			<!--<script type="text/javascript" src="../jquery/dist/jquery.js"></script>--> 
-			<!-- Took from here 15 May 2014: http://ajax.googleapis.com/ajax/libs/jquery/1.9.1 -->
-			
 			<script>
-				//Add your configuration here for AtomJump Feedback
+				//Add your configuration here for AtomJump Messaging
 				var ajFeedback = {
 					"uniqueFeedbackId" : "test_feedback",		//This can be anything globally unique to your company/page	
 					"myMachineUser" : "92.27.10.17:8",			/* Obtain this value from 1. Settings
