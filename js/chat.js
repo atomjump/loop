@@ -150,7 +150,7 @@ function openPopup(_this, forumId, emailRefreshFlag)
 			commentLayer = jQuery(_this).data('uniquefeedbackid');
 			whisperOften = jQuery(_this).data('mymachineuser');
 			
-			if(jQuery(_this).data('mailrefresh')) {
+			if(jQuery(_this).data('shortmail')) {
 				updateEmail();
 				
 				emailCheck = setInterval("updateEmail();", 60000);
@@ -163,6 +163,7 @@ function openPopup(_this, forumId, emailRefreshFlag)
 		if(emailRefreshFlag) {
 			if(emailRefreshFlag == true) {
 				//If we are mail refreshing
+				updateEmail();
 				emailCheck = setInterval("updateEmail();", 60000);
 			}
 		
@@ -254,9 +255,9 @@ jQuery(document).ready(function() {
 					openPopup(this, this.href.split('#comment-open-')[1]);
 				});
 				
-				jQuery('a[href^="#email-open-"]').click(function() {
-					//First base the forum name on an href eg. #comment-open-forumname
-					openPopup(this, this.href.split('#email-open-')[1], true);
+				jQuery('a[href^="#shortmail-open-"]').click(function() {
+					//First base the forum name on an href eg. #shortmail-open-forumname
+					openPopup(this, this.href.split('#shortmail-open-')[1], true);
 				});
 				
 				
