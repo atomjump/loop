@@ -70,7 +70,7 @@ var myUrl = window.location.href;
 var emailCheck;
 var cssFeedback = "";
 var cssStrap = "";
-var mailRefreshFlag = false;
+
 
 
 
@@ -113,7 +113,7 @@ function updateEmail()
 }
 
 
-function openPopup(_this, forumId)
+function openPopup(_this, forumId, emailRefreshFlag)
 {
 		
 		//Bring up a popup window (if Safari desktop only)
@@ -160,9 +160,11 @@ function openPopup(_this, forumId)
 			
 		}
 		
-		if(mailRefreshFlag == true) {
-			//If we are mail refreshing
-			emailCheck = setInterval("updateEmail();", 60000);
+		if(emailRefreshFlag) {
+			if(emailRefreshFlag == true) {
+				//If we are mail refreshing
+				emailCheck = setInterval("updateEmail();", 60000);
+			}
 		
 		}
 		
@@ -254,7 +256,7 @@ jQuery(document).ready(function() {
 				
 				jQuery('a[href^="#email-open-"]').click(function() {
 					//First base the forum name on an href eg. #comment-open-forumname
-					openPopup(this, this.href.split('#email-open-')[1]);
+					openPopup(this, this.href.split('#email-open-')[1], true);
 				});
 				
 				

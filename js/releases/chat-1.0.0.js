@@ -256,7 +256,6 @@ jQuery(document).ready(function() {
 				
 				jQuery('a[href^="#email-open-"]').click(function() {
 					//First base the forum name on an href eg. #comment-open-forumname
-					emailRefreshFlag = true;	//set global
 					openPopup(this, this.href.split('#email-open-')[1], true);
 				});
 				
