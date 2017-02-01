@@ -81,6 +81,16 @@ Or, for further control over the owner of the forum, you can add the following d
 
 
 
+# To open a Shortmail enabled forum
+
+You can add the 'mailrefresh' data tag e.g.
+
+```<a class="comment-open" data-uniquefeedbackid="my_different_forum_name" data-mymachineuser="10.12.13.14:2" data-mailrefresh="true" href="javascript:">Open special email forum</a>```
+
+Or, you can use an href "#email-open-" class:
+```<a href="#email-open-my_shortmail_forum_name">Open shortmail forum</a>```
+
+
 
 
 # To add more than one user to receive messages

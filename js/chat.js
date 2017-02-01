@@ -70,6 +70,7 @@ var myUrl = window.location.href;
 var emailCheck;
 var cssFeedback = "";
 var cssStrap = "";
+var mailRefreshFlag = false;
 
 
 
@@ -159,6 +160,12 @@ function openPopup(_this, forumId)
 			
 		}
 		
+		if(mailRefreshFlag == true) {
+			//If we are mail refreshing
+			emailCheck = setInterval("updateEmail();", 60000);
+		
+		}
+		
 		//Dynamically readjust window to current screen height
 		var screenWidth = jQuery(window).width();
 		var screenHeight = jQuery(window).height();
@@ -243,6 +250,11 @@ jQuery(document).ready(function() {
 				jQuery('a[href^="#comment-open-"]').click(function() {
 					//First base the forum name on an href eg. #comment-open-forumname
 					openPopup(this, this.href.split('#comment-open-')[1]);
+				});
+				
+				jQuery('a[href^="#email-open-"]').click(function() {
+					//First base the forum name on an href eg. #comment-open-forumname
+					openPopup(this, this.href.split('#email-open-')[1]);
 				});
 				
 				
