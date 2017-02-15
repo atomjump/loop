@@ -13,7 +13,7 @@ var lsmsg = {
         },
         "es":{
               privateMessage: 'Privado',
-              settings: 'Settings',
+              settings: 'Ajustes',
               uploadImagesTitle: 'Sube imágenes o vídeo.',
               uploadImagesTitleSorry: 'La subida de imágenes Lo siento, sólo se admiten en IE10+, o cualquier otro navegador.',
               sendTo: 'Enviar a',
