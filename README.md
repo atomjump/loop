@@ -220,7 +220,7 @@ Note: it can take up to 1 minute before any new message's sentiment will be calc
 
 
 For more details see
-https://atomjump.com
+https://atomjump.org
 
 
 
