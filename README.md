@@ -1,6 +1,6 @@
 <img src="https://atomjump.com/images/logo80.png">
 
-# AtomJump Messaging Web-service 
+# AtomJump Messaging Front-end 
 **(sometimes called the 'loop' project)**
 
 This tool provides a 'WhatsApp-like' group discussion forum from a popup on your website. It is good for feedback, but can also be used as a live discussion tool, or a CRM.  We actually run our entire operation off one page with several of these popups on it.
