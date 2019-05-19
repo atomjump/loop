@@ -5,11 +5,9 @@
 
 This tool provides a 'WhatsApp-like' group discussion forum from a popup on your website. It is good for general messaging, either within a company or family, in either a private or public setting.  
 
-The client software is entirely Javascript and CSS, but it refers to an AtomJump Messaging server to store messages. This is optionally available as a separate project at http://github.com/atomjump/loop-server, or by default you can use the AtomJump.com server.
+The client software is entirely Javascript and CSS, but it refers to an AtomJump Messaging server to store messages. This is freely available as a separate project at https://github.com/atomjump/loop-server, or you can use the AtomJump.com server, by default.
 
-Private forums on the hosted atomjump.com platform are purchased for US$10 / year to cover our costs, but public forums are free.
-
-Supported client platforms: IE8 upwards, Edge, Chrome, Firefox, Safari, Android Native, Android Chrome, Android Firefox, iPad, iPhone, Opera. There may be other supported platforms we haven't tested on.
+Private forums on the hosted AtomJump.com hosted platform are purchased for US$10 / year to cover the (non-profit) Foundation's costs, but public forums are free.
 
 See the demo at <a href="http://atomjump.org">AtomJump</a>
 
@@ -195,6 +193,21 @@ Note: it can take up to 1 minute before any new message's sentiment will be calc
 
 For more details see
 http://atomjump.org
+
+
+
+# Contributing
+
+Contributions are welcome, and they can take the shape of:
+
+1. Core: Submit github pull requests. We will need to consider whether the feature should be in core or as an option.  It is generally a good idea to get in touch with us via our homepage at http://atomjump.org to ensure we are not already working on a similar feature.
+2. Translations: We are looking for any translations of the chat-x.y.z.js files from English into your language. We have machine translated Spanish as a first step, but we need help in ensuring this is a good translation, and applying other languages.
+
+
+# License
+
+This software is open source under the MIT license. Copyright is with the AtomJump Foundation (New Zealand), a non-profit society.  You can use this software for any commercial purposes.
+
 
 
 
