@@ -6,7 +6,7 @@ var lsmsg = {
         "en":{
               privateMessage: 'Private',
               settings: 'Settings',
-              uploadImagesTitle: 'Upload images or video.',
+              uploadImagesTitle: 'Upload images.',
               uploadImagesTitleSorry: 'Sorry image uploads are only supported on IE10+, or any other browser.',
               sendTo: 'Send to',
               emoticonsTitle: 'Emoticons'
@@ -14,7 +14,7 @@ var lsmsg = {
         "es":{
               privateMessage: 'Privado',
               settings: 'Ajustes',
-              uploadImagesTitle: 'Sube imágenes o vídeo.',
+              uploadImagesTitle: 'Sube imágenes.',
               uploadImagesTitleSorry: 'La subida de imágenes Lo siento, sólo se admiten en IE10+, o cualquier otro navegador.',
               sendTo: 'Enviar a',
               emoticonsTitle: 'Emoticonos'

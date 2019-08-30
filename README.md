@@ -7,7 +7,7 @@ This tool provides a 'WhatsApp-like' group discussion forum from a popup on your
 
 The client software is entirely Javascript and CSS, but it refers to an AtomJump Messaging server to store messages. This is freely available as a separate project at https://github.com/atomjump/loop-server, or you can use the AtomJump.com server, by default.
 
-Private forums on the hosted AtomJump.com hosted platform are purchased for US$10 / year to cover the (non-profit) Foundation's costs, but public forums are free.
+Private forums on the hosted AtomJump.com hosted platform are purchased for US$10 / year to cover the (non-profit) Foundation's costs, but public forums are free, within reason.
 
 See the demo at <a href="http://atomjump.org">AtomJump</a>
 
