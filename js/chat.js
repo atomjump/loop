@@ -141,9 +141,12 @@ function openPopup(_this, forumId, emailRefreshFlag)
 			commentLayer = forumId;
 		
 		} else {
-			if(jQuery(_this).attr('id')) {
-				//2nd option base the forum name on an id
-				commentLayer = jQuery(_this).attr('id');
+			if(jQuery(_this).data('useid')) {
+				//Use the ID option
+				if(jQuery(_this).attr('id')) {
+					//2nd option base the forum name on an id
+					commentLayer = jQuery(_this).attr('id');
+				}
 			}
 		
 		}
