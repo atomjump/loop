@@ -145,6 +145,12 @@ function openPopup(_this, forumId, emailRefreshFlag)
 			commentLayer = jQuery(_this).attr('id');
 		}
 		
+		
+		if(jQuery(_this).data('notifyurl')) {
+			myUrl = jQuery(_this).data('notifyurl');		//Allow for user-created
+															//URLs for the current page. Used by e.g. sites behind password protection, so that notification 'open forum' links can be sent to a lead-up page which allows a login.
+		}
+		
 		if(jQuery(_this).data('uniquefeedbackid')) {
 			//If we have a unique feedback id for this link in the data properties, rest the globals.
 			commentLayer = jQuery(_this).data('uniquefeedbackid');
