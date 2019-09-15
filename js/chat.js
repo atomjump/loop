@@ -134,14 +134,17 @@ function openPopup(_this, forumId, emailRefreshFlag)
 		}
 		
 		
-		if(jQuery(_this).attr('id')) {
-			//First base the forum name on an id
-			commentLayer = jQuery(_this).attr('id');
-		}
+		
 		
 		if(forumId) {
-			//This is 2nd option - we had it passed into the function
+			//This is 1st option - we had it passed into the function
 			commentLayer = forumId;
+		
+		} else {
+			if(jQuery(_this).attr('id')) {
+				//2nd option base the forum name on an id
+				commentLayer = jQuery(_this).attr('id');
+			}
 		
 		}
 		
