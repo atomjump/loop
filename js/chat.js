@@ -9,7 +9,9 @@ var lsmsg = {
               uploadImagesTitle: 'Upload images.',
               uploadImagesTitleSorry: 'Sorry image uploads are only supported on IE10+, or any other browser.',
               sendTo: 'Send to',
-              emoticonsTitle: 'Emoticons'
+              emoticonsTitle: 'Emoticons',
+              helpURL: 'https://atomjump.com/wp/user-guide/',
+              helpTitle: 'Help'
         },
         "es":{
               privateMessage: 'Privado',
@@ -17,7 +19,9 @@ var lsmsg = {
               uploadImagesTitle: 'Sube imágenes.',
               uploadImagesTitleSorry: 'La subida de imágenes Lo siento, sólo se admiten en IE10+, o cualquier otro navegador.',
               sendTo: 'Enviar a',
-              emoticonsTitle: 'Emoticonos'
+              emoticonsTitle: 'Emoticonos',
+              helpURL: 'https://atomjump.com/wp/user-guide/',
+              helpTitle: 'Ayuda'
         }      
     }
 }
@@ -236,6 +240,19 @@ jQuery(document).ready(function() {
 			
 			var emoticonsStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a  id="comment-emoji-popup" style="" href="javascript:"><img title="' + lsmsg.msgs[lang].emoticonsTitle + '" src="' + ssshoutServer + '/images/emoticons.png"></a></span>';
 			
+			if(!lsmsg.msgs[lang].helpURL) {
+				var helpURL = "https://atomjump.com/wp/user-guide/";
+			} else {
+				var helpURL = lsmsg.msgs[lang].helpURL;
+			}
+			
+			if(!lsmsg.msgs[lang].helpTitle) {
+				var helpTitle = "Help";
+			} else {
+				var helpTitle = lsmsg.msgs[lang].helpTitle;
+			}
+			var helpStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a  id="comment-help" style="" target="_blank" href="' + helpURL + '"><img title="' + lsmsg.msgs[lang].helpTitle + '" src="' + ssshoutServer + '/images/help.png"></a></span>';  
+			
 			jQuery("#comment-holder").html('<div id="comment-popup-container" style="width:'+screenWidth+'px; height: '+screenHeight+'px" >\
 				<div id="comment-popup" class="comment-popup-style">\
 			 	  <div class="comment-padding">\
@@ -254,7 +271,7 @@ jQuery(document).ready(function() {
 			 				</div>\
 			 		 	</div>\
 				 		 <div id="comment-key">\
-				 			 <span class="comment-settings"><a id="comment-options-popup" href="javascript:"><img src="' + ssshoutServer + '/images/settings.png">&nbsp;' + lsmsg.msgs[lang].settings + '</a></span>' + uploadStr + emoticonsStr + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-private-key">' + lsmsg.msgs[lang].privateMessage + '</span>\
+				 			 <span class="comment-settings"><a id="comment-options-popup" href="javascript:"><img src="' + ssshoutServer + '/images/settings.png">&nbsp;' + lsmsg.msgs[lang].settings + '</a></span>' + uploadStr + emoticonsStr + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-private-key">' + lsmsg.msgs[lang].privateMessage + '</span>' + helpStr\
 				 		</div>\
 					</div>\
 			 </div>\

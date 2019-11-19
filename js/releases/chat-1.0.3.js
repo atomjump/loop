@@ -133,18 +133,23 @@ function openPopup(_this, forumId, emailRefreshFlag)
 			}
 		}
 		
+		
+		
+		
 		if(forumId) {
-			//This is first option - we had it passed into the function
+			//This is 1st option - we had it passed into the function
 			commentLayer = forumId;
 		
+		} else {
+			if(jQuery(_this).data('useid')) {
+				//Use the ID option
+				if(jQuery(_this).attr('id')) {
+					//2nd option base the forum name on an id
+					commentLayer = jQuery(_this).attr('id');
+				}
+			}
+		
 		}
-		
-		
-		if(jQuery(_this).attr('id')) {
-			//First base the forum name on an id
-			commentLayer = jQuery(_this).attr('id');
-		}
-		
 		
 		if(jQuery(_this).data('notifyurl')) {
 			myUrl = jQuery(_this).data('notifyurl');		//Allow for user-created
@@ -231,6 +236,13 @@ jQuery(document).ready(function() {
 			
 			var emoticonsStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a  id="comment-emoji-popup" style="" href="javascript:"><img title="' + lsmsg.msgs[lang].emoticonsTitle + '" src="' + ssshoutServer + '/images/emoticons.png"></a></span>';
 			
+			if(!lsmsg.msgs[lang].helpURL) {
+				helpURL = "https://atomjump.com/wp/user-guide/";
+			} else {
+				helpURL = lsmsg.msgs[lang].helpURL;
+			}
+			var helpStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a  id="comment-help" style="" target="_blank" href="' + helpURL + '"><img title="' + lsmsg.msgs[lang].helpTitle + '" src="' + ssshoutServer + '/images/help.png"></a></span>';  
+			
 			jQuery("#comment-holder").html('<div id="comment-popup-container" style="width:'+screenWidth+'px; height: '+screenHeight+'px" >\
 				<div id="comment-popup" class="comment-popup-style">\
 			 	  <div class="comment-padding">\
@@ -249,7 +261,7 @@ jQuery(document).ready(function() {
 			 				</div>\
 			 		 	</div>\
 				 		 <div id="comment-key">\
-				 			 <span class="comment-settings"><a id="comment-options-popup" href="javascript:"><img src="' + ssshoutServer + '/images/settings.png">&nbsp;' + lsmsg.msgs[lang].settings + '</a></span>' + uploadStr + emoticonsStr + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-private-key">' + lsmsg.msgs[lang].privateMessage + '</span>\
+				 			 <span class="comment-settings"><a id="comment-options-popup" href="javascript:"><img src="' + ssshoutServer + '/images/settings.png">&nbsp;' + lsmsg.msgs[lang].settings + '</a></span>' + uploadStr + emoticonsStr + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-private-key">' + lsmsg.msgs[lang].privateMessage + '</span>' + helpStr\
 				 		</div>\
 					</div>\
 			 </div>\
