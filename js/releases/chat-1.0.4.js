@@ -251,7 +251,7 @@ jQuery(document).ready(function() {
 			} else {
 				var helpTitle = lsmsg.msgs[lang].helpTitle;
 			}
-			var helpStr = '&nbsp;&nbsp;<span class="comment-settings" style="float: right; "><a  id="comment-help" style="" target="_blank" href="' + helpURL + '"><img title="' + lsmsg.msgs[lang].helpTitle + '" src="' + ssshoutServer + '/images/help.png"></a></span>';  
+			var helpStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a  id="comment-help" style="" target="_blank" href="' + helpURL + '"><img title="' + lsmsg.msgs[lang].helpTitle + '" src="' + ssshoutServer + '/images/help.png"></a></span>';  
 			
 			jQuery("#comment-holder").html('<div id="comment-popup-container" style="width:'+screenWidth+'px; height: '+screenHeight+'px" >\
 				<div id="comment-popup" class="comment-popup-style">\
@@ -271,7 +271,7 @@ jQuery(document).ready(function() {
 			 				</div>\
 			 		 	</div>\
 				 		 <div id="comment-key">\
-				 			 <span class="comment-settings"><a id="comment-options-popup" href="javascript:"><img src="' + ssshoutServer + '/images/settings.png">&nbsp;' + lsmsg.msgs[lang].settings + '</a></span>' + uploadStr + emoticonsStr + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-private-key">' + lsmsg.msgs[lang].privateMessage + '</span>' + helpStr + '\
+				 			 <span class="comment-settings"><a id="comment-options-popup" href="javascript:"><img src="' + ssshoutServer + '/images/settings.png">&nbsp;' + lsmsg.msgs[lang].settings + '</a></span>' + uploadStr + emoticonsStr + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-private-key">' + lsmsg.msgs[lang].privateMessage + '</span>' + helpStr\
 				 		</div>\
 					</div>\
 			 </div>\
