@@ -213,6 +213,34 @@ function openPopup(_this, forumId, emailRefreshFlag)
 
 
 
+function writeCommentHolder(screenWidth, screenHeight, ssshoutServer, settings, uploadStr, emoticonsStr, privateMessage, helpStr) {
+
+	jQuery("#comment-holder").html('<div id="comment-popup-container" style="width:'+screenWidth+'px; height: '+screenHeight+'px" >\
+				<div id="comment-popup" class="comment-popup-style">\
+			 	  <div class="comment-padding">\
+			 	  \
+			 		 <div id="comment-close-popup-container">\
+			 		 	<a id="comment-close-popup" href="javascript:"><img src="' + ssshoutServer + '/images/multiply.png"></a>\
+			 		 	<div style="clear: both;"></div>\
+			 		 </div>\
+			 		 <div id="comment-popup-inner">\
+			 		 	<div class="comment-padding-allow-space">\
+			 		 		<div id="comment-popup-text-container">\
+			 		  			<div class="comment-padding">\
+			 		  				<div id="comment-loading"><img src="' + ssshoutServer + '/images/ajax-loader.gif" /></div>\
+			 		  				<div id="comment-in-here"></div>\
+			 					</div>\
+			 				</div>\
+			 		 	</div>\
+				 		 <div id="comment-key">\
+				 			 <span class="comment-settings"><a id="comment-options-popup" href="javascript:"><img src="' + ssshoutServer + '/images/settings.png">&nbsp;' + settings + '</a></span>' + uploadStr + emoticonsStr + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-private-key">' + privateMessage + '</span>' + helpStr + '\
+				 		</div>\
+					</div>\
+			 </div>\
+			</div>');
+}
+
+
 //Run automatically
 if(typeof ajFeedback !== 'undefined') {
 	initAtomJumpFeedback(ajFeedback);
@@ -253,29 +281,18 @@ jQuery(document).ready(function() {
 			}
 			var helpStr = '&nbsp;&nbsp;<span class="comment-settings" style="float: right; "><a  id="comment-help" style="" target="_blank" href="' + helpURL + '"><img title="' + lsmsg.msgs[lang].helpTitle + '" src="' + ssshoutServer + '/images/help.png"></a></span>';  
 			
-			jQuery("#comment-holder").html('<div id="comment-popup-container" style="width:'+screenWidth+'px; height: '+screenHeight+'px" >\
-				<div id="comment-popup" class="comment-popup-style">\
-			 	  <div class="comment-padding">\
-			 	  \
-			 		 <div id="comment-close-popup-container">\
-			 		 	<a id="comment-close-popup" href="javascript:"><img src="' + ssshoutServer + '/images/multiply.png"></a>\
-			 		 	<div style="clear: both;"></div>\
-			 		 </div>\
-			 		 <div id="comment-popup-inner">\
-			 		 	<div class="comment-padding-allow-space">\
-			 		 		<div id="comment-popup-text-container">\
-			 		  			<div class="comment-padding">\
-			 		  				<div id="comment-loading"><img src="' + ssshoutServer + '/images/ajax-loader.gif" /></div>\
-			 		  				<div id="comment-in-here"></div>\
-			 					</div>\
-			 				</div>\
-			 		 	</div>\
-				 		 <div id="comment-key">\
-				 			 <span class="comment-settings"><a id="comment-options-popup" href="javascript:"><img src="' + ssshoutServer + '/images/settings.png">&nbsp;' + lsmsg.msgs[lang].settings + '</a></span>' + uploadStr + emoticonsStr + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-private-key">' + lsmsg.msgs[lang].privateMessage + '</span>' + helpStr + '\
-				 		</div>\
-					</div>\
-			 </div>\
-			</div>');
+			
+			jQuery(window).resize(function() {
+				//On a Window resize, rewrite the comment-holder
+				screenWidth = jQuery(window).width();
+				screenHeight = jQuery(window).height();
+				writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);
+			
+			});
+			
+			//Write the holder
+			writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);
+			
 			
 			
 				jQuery('a[href^="#comment-open-"]').click(function() {
