@@ -395,7 +395,7 @@ jQuery(document).ready(function() {
 			
 			jQuery(window).resize(function() {
 				//On a Window resize, rewrite the comment-holder
-				if(currentWindow.forumId) {
+				if(currentWindow.forumId != null) {
 					//There is an open window
 					screenWidth = jQuery(window).width();
 					screenHeight = jQuery(window).height();
