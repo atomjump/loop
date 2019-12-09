@@ -253,63 +253,6 @@ function writeCommentHolder(screenWidth, screenHeight, ssshoutServer, settings, 
 					</div>\
 			 </div>\
 			</div>');
-}
-
-
-//Run automatically
-if(typeof ajFeedback !== 'undefined') {
-	initAtomJumpFeedback(ajFeedback);
-}
-
-
-
-
-
-jQuery(document).ready(function() {
-			var screenWidth = jQuery(window).width();
-			var screenHeight = jQuery(window).height();
-			var setLang = getCookie("lang");
-			if(setLang) {
-			    lang = setLang;			
-			}
-			
-			
-			//If IE10 or above, or any other browser
-			if(window.atob) {
-				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a id="comment-upload-popup" style="" href="javascript:"><img title="' + lsmsg.msgs[lang].uploadImagesTitle + '" src="' + ssshoutServer + '/images/upload.png"></a></span>';
-			} else {
-				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a style="" href="javascript:"><img title="' + lsmsg.msgs[lang].uploadImagesTitleSorry + '" src="' + ssshoutServer + '/images/noupload.png"></a></span>';
-			}
-			
-			var emoticonsStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a  id="comment-emoji-popup" style="" href="javascript:"><img title="' + lsmsg.msgs[lang].emoticonsTitle + '" src="' + ssshoutServer + '/images/emoticons.png"></a></span>';
-			
-			if(!lsmsg.msgs[lang].helpURL) {
-				var helpURL = "https://atomjump.com/wp/user-guide/";
-			} else {
-				var helpURL = lsmsg.msgs[lang].helpURL;
-			}
-			
-			if(!lsmsg.msgs[lang].helpTitle) {
-				var helpTitle = "Help";
-			} else {
-				var helpTitle = lsmsg.msgs[lang].helpTitle;
-			}
-			var helpStr = '&nbsp;&nbsp;<span class="comment-settings" style="float: right; "><a  id="comment-help" style="" target="_blank" href="' + helpURL + '"><img title="' + lsmsg.msgs[lang].helpTitle + '" src="' + ssshoutServer + '/images/help.png"></a></span>';  
-			
-			
-			jQuery(window).resize(function() {
-				//On a Window resize, rewrite the comment-holder
-				screenWidth = jQuery(window).width();
-				screenHeight = jQuery(window).height();
-				writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);
-				
-				openPopup(currentWindow._this, currentWindow.forumId, currentWindow.emailRefreshFlag);
-			
-			});
-			
-			//Write the holder
-			writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);
-			
 			
 			
 				jQuery('a[href^="#comment-open-"]').click(function() {
@@ -397,7 +340,69 @@ jQuery(document).ready(function() {
 				
 				
 				jQuery('#chat-input-block').append('<input' + ' type="hidden" ' + 'name="cs" ' + ' value="'+ cs + '">');
+					
+			
+			
+}
+
+
+//Run automatically
+if(typeof ajFeedback !== 'undefined') {
+	initAtomJumpFeedback(ajFeedback);
+}
+
+
+
+
+
+jQuery(document).ready(function() {
+			var screenWidth = jQuery(window).width();
+			var screenHeight = jQuery(window).height();
+			var setLang = getCookie("lang");
+			if(setLang) {
+			    lang = setLang;			
+			}
+			
+			
+			//If IE10 or above, or any other browser
+			if(window.atob) {
+				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a id="comment-upload-popup" style="" href="javascript:"><img title="' + lsmsg.msgs[lang].uploadImagesTitle + '" src="' + ssshoutServer + '/images/upload.png"></a></span>';
+			} else {
+				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a style="" href="javascript:"><img title="' + lsmsg.msgs[lang].uploadImagesTitleSorry + '" src="' + ssshoutServer + '/images/noupload.png"></a></span>';
+			}
+			
+			var emoticonsStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a  id="comment-emoji-popup" style="" href="javascript:"><img title="' + lsmsg.msgs[lang].emoticonsTitle + '" src="' + ssshoutServer + '/images/emoticons.png"></a></span>';
+			
+			if(!lsmsg.msgs[lang].helpURL) {
+				var helpURL = "https://atomjump.com/wp/user-guide/";
+			} else {
+				var helpURL = lsmsg.msgs[lang].helpURL;
+			}
+			
+			if(!lsmsg.msgs[lang].helpTitle) {
+				var helpTitle = "Help";
+			} else {
+				var helpTitle = lsmsg.msgs[lang].helpTitle;
+			}
+			var helpStr = '&nbsp;&nbsp;<span class="comment-settings" style="float: right; "><a  id="comment-help" style="" target="_blank" href="' + helpURL + '"><img title="' + lsmsg.msgs[lang].helpTitle + '" src="' + ssshoutServer + '/images/help.png"></a></span>';  
+			
+			
+			jQuery(window).resize(function() {
+				//On a Window resize, rewrite the comment-holder
+				screenWidth = jQuery(window).width();
+				screenHeight = jQuery(window).height();
+				writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);
 				
+				openPopup(currentWindow._this, currentWindow.forumId, currentWindow.emailRefreshFlag);
+			
+			});
+			
+			//Write the holder
+			writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);
+			
+			
+			
+
 				
 		
 		});
