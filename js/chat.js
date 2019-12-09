@@ -117,8 +117,23 @@ function updateEmail()
 }
 
 
+
+
+var currentWindow = {
+	"_this": null,
+	"forumId": null,
+	"emailRefreshFlag": null 
+
+}
+
+
 function openPopup(_this, forumId, emailRefreshFlag)
 {
+		//Save status for a screen resize
+		currentWindow._this = _this;
+		currentWindow.forumId = forumId;
+		currentWindow.emailRefreshFlag = emailRefreshFlag;
+		
 		
 		//Bring up a popup window (if Safari desktop only)
 		//to ensure that we have the security permissions to set the session
@@ -287,6 +302,8 @@ jQuery(document).ready(function() {
 				screenWidth = jQuery(window).width();
 				screenHeight = jQuery(window).height();
 				writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);
+				
+				openPopup(currentWindow._this, currentWindow.forumId, currentWindow.emailRefreshFlag);
 			
 			});
 			
