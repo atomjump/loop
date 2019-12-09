@@ -129,7 +129,7 @@ var currentWindow = {
 
 function openPopup(_this, forumId, emailRefreshFlag)
 {
-		//Save status for a screen resize
+		//Save status for a screen resize	
 		currentWindow._this = _this;
 		currentWindow.forumId = forumId;
 		currentWindow.emailRefreshFlag = emailRefreshFlag;
@@ -278,6 +278,12 @@ function writeCommentHolder(screenWidth, screenHeight, ssshoutServer, settings, 
 					var iframe = document.getElementById('comment-iframe');
 					iframe.parentNode.removeChild(iframe);
 					
+					currentWindow = {
+						"_this": null,
+						"forumId": null,
+						"emailRefreshFlag": null 
+					}
+					
 					if(emailCheck) {			//if we have a timer on the email
 						clearTimeout(emailCheck);	
 					
@@ -389,11 +395,14 @@ jQuery(document).ready(function() {
 			
 			jQuery(window).resize(function() {
 				//On a Window resize, rewrite the comment-holder
-				screenWidth = jQuery(window).width();
-				screenHeight = jQuery(window).height();
-				writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);
+				if(currentWindow.forumId) {
+					//There is an open window
+					screenWidth = jQuery(window).width();
+					screenHeight = jQuery(window).height();
+					writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);
 				
-				openPopup(currentWindow._this, currentWindow.forumId, currentWindow.emailRefreshFlag);
+					openPopup(currentWindow._this, currentWindow.forumId, currentWindow.emailRefreshFlag);
+				}
 			
 			});
 			

@@ -101,10 +101,10 @@ button:focus {
 	position: relative;
 	z-index: 4000;
 	top: 5%;
-	left:5%;
+	left:0%;
 	height: 90%;
 	
-	width: 90%;  
+	width: 100%;  
 	background-color: #ddd;
 	
 	font-family: helvetica, sans-serif;
