@@ -529,7 +529,7 @@ img {
 		-webkit-overflow-scrolling: touch;		
 		overflow-y: scroll; /* was auto */
 		padding-right: 4px;	/* added for slight margin */
-		padding-left: 4px;	/* added for some margin */
+		padding-left: 10px;	/* added for some margin */
 
 	}
 
