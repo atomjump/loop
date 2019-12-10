@@ -488,6 +488,8 @@ img {
 	#comment-close-popup-container 	{
 		position: relative;
 		float: right;
+		width: 0px;
+		height: 16px;
 		/*width: 0px;*/
 	
 	}
