@@ -472,7 +472,7 @@ img {
 	}
 	
 	.comment-padding-allow-space {
-		margin-top: 20px;			/* smaller left and right */
+		margin-top: 24px;			/* smaller left and right, but bigger at top */
 		margin-bottom: 10px;
 		margin-left: 0px;
 		margin-right: 0px;
