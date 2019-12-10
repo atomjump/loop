@@ -464,7 +464,6 @@ img {
 	
 		width: 100%;  
 		background-color: #ddd;
-		opacity: 0.5;		/* this is different */
 	
 		font-family: helvetica, sans-serif;
 		font-size: 12px;
@@ -487,6 +486,9 @@ img {
 		right:0;
 		bottom:0;
 		z-index: 4100;
+		
+		opacity: 0.5;		/* this is different */
+
 
 	}
 	
