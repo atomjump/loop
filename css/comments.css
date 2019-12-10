@@ -457,7 +457,11 @@ img {
 	}
 	
 	.comment-padding {
-		margin: 2px;			/* smaller here */
+		
+		margin-top: 10px;			/* smaller left and right */
+		margin-bottom: 10px;
+		margin-left: 0px;
+		margin-right: 0px;
 		position: absolute;
 		top:0;
 		left:0;
@@ -468,7 +472,7 @@ img {
 	}
 	
 	.comment-padding-allow-space {
-		margin-top: 10px;			/* smaller here */
+		margin-top: 10px;			/* smaller left and right */
 		margin-bottom: 10px;
 		margin-left: 0px;
 		margin-right: 0px;
@@ -484,7 +488,7 @@ img {
 	#comment-close-popup-container 	{
 		position: relative;
 		float: right;
-		width: 20px;
+		/*width: 0px;*/
 	
 	}
 
