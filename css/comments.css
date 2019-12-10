@@ -525,7 +525,7 @@ img {
 		border-radius: 10px;
 		background-color: white;
 		z-index: 4200;
-		opacity: 1.0;		/* this is different */
+		opacity: 0.0;		/* this is different */
 	}
 	
 	#comment-key {
