@@ -493,6 +493,20 @@ img {
 		/*width: 0px;*/
 	
 	}
+	
+	#comment-popup-text-container {
+		position: relative;
+		border: 1px solid #ddd;
+		top: 0px;
+		left:0px;
+		height: 100%; /*works in every browser except ie7*/
+		width: 100%;  /* wider here */
+		overflow-y: hidden;  /* was auto */
+		overflow-x: hidden;
+		border-radius: 10px;
+		background-color: white;
+		z-index: 4200;
+	}
 
 	
 }
