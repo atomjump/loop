@@ -521,6 +521,17 @@ img {
 		white-space: nowrap;
 		float: left;
 	}
+	
+	
+	.comment-frm-scroller {
+		display: none;
+	
+		-webkit-overflow-scrolling: touch;		
+		overflow-y: scroll; /* was auto */
+		padding-right: 4px;	/* added for slight margin */
+		padding-left: 4px;	/* added for some margin */
+
+	}
 
 	
 }
