@@ -549,6 +549,11 @@ img {
 		padding-left: 10px;	/* added for some margin */
 
 	}
+	
+	.comment-msg-td {
+		word-wrap: break-word;
+		width: 80%;
+	}
 
 	
 }
