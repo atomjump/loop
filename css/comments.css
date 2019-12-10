@@ -464,6 +464,7 @@ img {
 	
 		width: 100%;  
 		background-color: #ddd;
+		opacity: 0.5;		/* this is different */
 	
 		font-family: helvetica, sans-serif;
 		font-size: 12px;
