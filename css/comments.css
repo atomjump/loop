@@ -436,6 +436,23 @@ img {
 }
 
 
+.comment-msg-td {
+	word-wrap: break-word;
+	width: 65%;
+}
+
+.comment-ago-td {
+	max-width:36%; 
+	padding-right: 0px !important;
+}
+
+.comment-ago-text {
+	min-width: 55px;
+	overflow: hidden; 
+	white-space:nowrap;
+}
+
+
 @media (max-width: 768px) {
 	/* Mobile devices have 100% screens */
 	#comment-popup {
