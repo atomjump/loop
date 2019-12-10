@@ -515,7 +515,7 @@ img {
 		left: 10px;
 		z-index:5000;
 		width:100%;	
-		margin-right: 10px;		/* this is added */
+		padding-right: 10px;		/* this is added */
 		display: inline-block;
 		white-space: nowrap;
 		float: left;
