@@ -74,6 +74,7 @@ var myUrl = window.location.href;
 var emailCheck;
 var cssFeedback = "";
 var cssStrap = "";
+var oldScreenWidth = null;
 
 
 
@@ -364,6 +365,8 @@ if(typeof ajFeedback !== 'undefined') {
 jQuery(document).ready(function() {
 			var screenWidth = jQuery(window).width();
 			var screenHeight = jQuery(window).height();
+			
+			oldScreenWidth = screenWidth;
 			var setLang = getCookie("lang");
 			if(setLang) {
 			    lang = setLang;			
@@ -396,12 +399,25 @@ jQuery(document).ready(function() {
 			jQuery(window).resize(function() {
 				//On a Window resize, rewrite the comment-holder
 				if(currentWindow.forumId != null) {
-					//There is an open window
+				
 					screenWidth = jQuery(window).width();
 					screenHeight = jQuery(window).height();
-					writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);
+					
+					if(screenWidth != oldScreenWidth) {
+						
+						oldScreenWidth = screenWidth;
+						
+						//TODO: this would get annoying. Need to attach the previous iframe and comms back to it to resize.
+						//Confirm the width has changed - if it is a mobile browser, the height will change on a keyboard input.
+						if(confirm("Your screen has changed. Would you like to resize (you will lose anything you've typed)?")) {
 				
-					openPopup(currentWindow._this, currentWindow.forumId, currentWindow.emailRefreshFlag);
+							//There is an open window
+						
+							writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);
+				
+							openPopup(currentWindow._this, currentWindow.forumId, currentWindow.emailRefreshFlag);
+						}
+					}
 				}
 			
 			});
