@@ -482,7 +482,7 @@ img {
 	.comment-padding {
 		
 		margin-top: 10px;			/* smaller left and right */
-		margin-bottom: 10px;
+		margin-bottom: 14px;		/* larger bottom */
 		margin-left: 0px;
 		margin-right: 0px;
 		position: absolute;
