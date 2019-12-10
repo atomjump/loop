@@ -453,8 +453,8 @@ img {
 		color: #444;
 
 		/*Removed: */
-		/*box-shadow: 2px 2px 2px rgba(0,0,0,.5);*/
-		/*border-radius: 10px;*/
+		box-shadow: 0px 0px 0px rgba(0,0,0,.5);
+		border-radius: 0px;
 	}
 	
 	.comment-padding {
@@ -504,7 +504,7 @@ img {
 		width: 100%;  /* wider here */
 		overflow-y: hidden;  /* was auto */
 		overflow-x: hidden;
-		/* TESTING OUT border-radius: 10px;*/
+		border-radius: 10px;
 		background-color: white;
 		z-index: 4200;
 	}
