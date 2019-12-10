@@ -486,9 +486,6 @@ img {
 		right:0;
 		bottom:0;
 		z-index: 4100;
-		
-		opacity: 0.5;		/* this is different */
-
 
 	}
 	
@@ -527,7 +524,6 @@ img {
 		border-radius: 10px;
 		background-color: white;
 		z-index: 4200;
-		opacity: 1.0;		/* this is different */
 	}
 	
 	#comment-key {
