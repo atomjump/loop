@@ -375,12 +375,12 @@ jQuery(document).ready(function() {
 			
 			//If IE10 or above, or any other browser
 			if(window.atob) {
-				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a id="comment-upload-popup" style="" href="javascript:"><img title="' + lsmsg.msgs[lang].uploadImagesTitle + '" src="' + ssshoutServer + '/images/upload.png"></a></span>';
+				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a id="comment-upload-popup" class="comment-button" href="javascript:"><img title="' + lsmsg.msgs[lang].uploadImagesTitle + '" src="' + ssshoutServer + '/images/upload.png"></a></span>';
 			} else {
-				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a style="" href="javascript:"><img title="' + lsmsg.msgs[lang].uploadImagesTitleSorry + '" src="' + ssshoutServer + '/images/noupload.png"></a></span>';
+				var uploadStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a class="comment-button" href="javascript:"><img title="' + lsmsg.msgs[lang].uploadImagesTitleSorry + '" src="' + ssshoutServer + '/images/noupload.png"></a></span>';
 			}
 			
-			var emoticonsStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a  id="comment-emoji-popup" style="" href="javascript:"><img title="' + lsmsg.msgs[lang].emoticonsTitle + '" src="' + ssshoutServer + '/images/emoticons.png"></a></span>';
+			var emoticonsStr = '&nbsp;&nbsp;<span class="comment-settings" style=""><a id="comment-emoji-popup" class="comment-button" href="javascript:"><img title="' + lsmsg.msgs[lang].emoticonsTitle + '" src="' + ssshoutServer + '/images/emoticons.png"></a></span>';
 			
 			if(!lsmsg.msgs[lang].helpURL) {
 				var helpURL = "https://atomjump.com/wp/user-guide/";

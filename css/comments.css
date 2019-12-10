@@ -410,6 +410,11 @@ img {
 	margin-right: 10px;
 }
 
+.comment-button {
+	margin: 0px;
+
+}
+
 
 
 .comment-private-key {
@@ -553,6 +558,11 @@ img {
 	.comment-msg-td {
 		word-wrap: break-word;
 		width: 74%;
+	}
+	
+	.comment-button {
+		margin: 4px;	/* make easier to touch */
+
 	}
 
 	
