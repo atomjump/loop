@@ -397,6 +397,7 @@ jQuery(document).ready(function() {
 			
 			
 			jQuery(window).resize(function() {
+				/*
 				//On a Window resize, rewrite the comment-holder
 				if(currentWindow.forumId != null) {
 				
@@ -419,6 +420,7 @@ jQuery(document).ready(function() {
 						}
 					}
 				}
+				*/
 			
 			});
 			
