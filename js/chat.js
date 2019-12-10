@@ -409,7 +409,7 @@ jQuery(document).ready(function() {
 						
 						//TODO: this would get annoying. Need to attach the previous iframe and comms back to it to resize.
 						//Confirm the width has changed - if it is a mobile browser, the height will change on a keyboard input.
-						if(confirm("Your screen has changed. Would you like to resize (you will lose anything you've typed)?")) {
+						if(confirm("Would you like to resize your messaging box (you will lose anything you're typing)?")) {
 				
 							//There is an open window
 						
