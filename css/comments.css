@@ -105,14 +105,14 @@ button:focus {
 	height: 90%;
 	
 	width: 90%;  
-	background-color: #ddd;
+	background-color: rgba(200,200,200,0.9);
 	
 	font-family: helvetica, sans-serif;
 	font-size: 12px;
 	color: #444;
 
 	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 
@@ -169,7 +169,7 @@ button:focus {
 	width: 95%;
 	overflow-y: hidden;  /* was auto */
 	overflow-x: hidden;
-	border-radius: 10px;
+	border-radius: 5px;
 	background-color: white;
 	z-index: 4200;
 }
@@ -468,7 +468,7 @@ img {
 		height: 100%;
 	
 		width: 100%;  
-		background-color: #ddd;
+		background-color: rgba(200,200,200,0.9);
 	
 		font-family: helvetica, sans-serif;
 		font-size: 12px;
@@ -526,7 +526,7 @@ img {
 		width: 100%;  /* wider here */
 		overflow-y: hidden;  /* was auto */
 		overflow-x: hidden;
-		border-radius: 10px;
+		border-radius: 5px;
 		background-color: white;
 		z-index: 4200;
 	}
