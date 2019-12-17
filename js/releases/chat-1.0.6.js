@@ -84,16 +84,17 @@ function initAtomJumpFeedback(params)
 	commentLayer = params.uniqueFeedbackId;
 	whisperOften = params.myMachineUser;
 	if(params.server){
-	  ssshoutServer = params.server;
- }
- if(params.cssFeedback) {
-   cssFeedback = params.cssFeedback;
- }
- if(params.cssBootstrap) {
-   cssStrap = params.cssBootstrap;
- }
-
-
+		ssshoutServer = params.server;
+	}
+	if(params.cssFeedback) {
+		cssFeedback = params.cssFeedback;
+	}
+	if(params.cssBootstrap) {
+		cssStrap = params.cssBootstrap;
+	}
+	if(params.sameDomain) {
+		sameDomain = params.sameDomain;
+	}
 }
 
 
@@ -117,6 +118,26 @@ function updateEmail()
 
 }
 
+// Message event handler (e is event object) 
+function handleMessage(e) {
+    // Reference to title element for data display
+    var el = document.getElementById('comment-title');   //jQuery("#comment-title").html(data);
+    // Check origin
+    if(sameDomain) {
+		if (e.origin.indexOf(sameDomain) != -1) {
+			// Retrieve data sent in postMessage
+			el.innerHTML = e.data.title;
+			// Send reply to source of message
+			e.source.postMessage('title', e.origin);
+		}
+	} else {
+			// Retrieve data sent in postMessage
+			el.innerHTML = e.data.title;
+			// Send reply to source of message
+			e.source.postMessage('title', e.origin);	
+	}
+}
+
 
 
 
@@ -135,6 +156,9 @@ function openPopup(_this, forumId, emailRefreshFlag)
 		currentWindow.forumId = forumId;
 		currentWindow.emailRefreshFlag = emailRefreshFlag;
 		
+		
+		jQuery('#comment-title').html("");		//Blank out any old title
+
 		
 		//Bring up a popup window (if Safari desktop only)
 		//to ensure that we have the security permissions to set the session
@@ -209,10 +233,11 @@ function openPopup(_this, forumId, emailRefreshFlag)
 		
 		
 		//Get the title if it exists
-		var titleUrl = ssshoutServer + '/title-secure.php?uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&server=' + encodeURIComponent(ssshoutServer) + '&clientremoteurl=' + encodeURIComponent(myUrl);
+		/*var titleUrl = ssshoutServer + '/title-secure.php?uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&server=' + encodeURIComponent(ssshoutServer) + '&clientremoteurl=' + encodeURIComponent(myUrl);
 		jQuery.get(titleUrl, function(data) {
 			jQuery("#comment-title").html(data);
-		});
+		});*/
+		// var receiver =  document.getElementById(\'comment-iframe\').contentWindow; receiver.postMessage(\'title\', ssshoutServer);
 		
 		
 		jQuery("#comment-in-here").html('');
@@ -228,6 +253,13 @@ function openPopup(_this, forumId, emailRefreshFlag)
 					
 			jQuery("#comment-in-here").html('<iframe id="comment-iframe" src="' + ssshoutServer + '/search-secure.php?width=' + wid + '&height=' + hei + '&uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&cssFeedback=' + encodeURIComponent(cssFeedback) + '&cssBootstrap=' + encodeURIComponent(cssStrap) + '&server=' + encodeURIComponent(ssshoutServer) + '&clientremoteurl=' + encodeURIComponent(myUrl) + '" frameBorder="0" scrolling="no" width="' + wid + '" height="' + hei + '" onload="jQuery(\'#comment-loading\').hide();" allowfullscreen></iframe>');
 			
+			// Assign handler to message event
+			if ( window.addEventListener ) {
+				window.addEventListener('message', handleMessage, false);
+			} else if ( window.attachEvent ) { // ie8
+				window.attachEvent('onmessage', handleMessage);
+			}
+			
 			
 		
 		});
@@ -238,6 +270,7 @@ function openPopup(_this, forumId, emailRefreshFlag)
 
 
 function writeCommentHolder(screenWidth, screenHeight, ssshoutServer, settings, uploadStr, emoticonsStr, privateMessage, helpStr) {
+
 
 	jQuery("#comment-holder").html('<div id="comment-popup-container" style="width:'+screenWidth+'px; height: '+screenHeight+'px" >\
 				<div id="comment-popup" class="comment-popup-style">\
@@ -263,6 +296,9 @@ function writeCommentHolder(screenWidth, screenHeight, ssshoutServer, settings, 
 					</div>\
 			 </div>\
 			</div>');
+			
+			
+
 			
 			
 				jQuery('a[href^="#comment-open-"]').click(function() {
