@@ -92,8 +92,8 @@ function initAtomJumpFeedback(params)
 	if(params.cssBootstrap) {
 		cssStrap = params.cssBootstrap;
 	}
-	if(params.sameDomain) {
-		sameDomain = params.sameDomain;
+	if(params.domain) {
+		sameDomain = params.domain;
 	}
 }
 
@@ -121,7 +121,7 @@ function updateEmail()
 // Message event handler (e is event object) 
 function handleMessage(e) {
     // Reference to title element for data display
-    var el = document.getElementById('comment-title');   //jQuery("#comment-title").html(data);
+    var el = document.getElementById('comment-title'); 
     // Check origin
     if(sameDomain) {
 		if (e.origin.indexOf(sameDomain) != -1) {
@@ -228,18 +228,8 @@ function openPopup(_this, forumId, emailRefreshFlag)
 		var screenWidth = jQuery(window).width();
 		var screenHeight = jQuery(window).height();
 		jQuery('#comment-popup-container').width(Math.floor(screenWidth) + "px");
-		jQuery('#comment-popup-container').height(Math.floor(screenHeight) + "px");
-		
-		
-		
-		//Get the title if it exists
-		/*var titleUrl = ssshoutServer + '/title-secure.php?uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&server=' + encodeURIComponent(ssshoutServer) + '&clientremoteurl=' + encodeURIComponent(myUrl);
-		jQuery.get(titleUrl, function(data) {
-			jQuery("#comment-title").html(data);
-		});*/
-		// var receiver =  document.getElementById(\'comment-iframe\').contentWindow; receiver.postMessage(\'title\', ssshoutServer);
-		
-		
+		jQuery('#comment-popup-container').height(Math.floor(screenHeight) + "px");	
+
 		jQuery("#comment-in-here").html('');
 		
 		
