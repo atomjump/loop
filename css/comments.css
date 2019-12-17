@@ -142,7 +142,7 @@ button:focus {
 
 .comment-padding-allow-space {
 	margin: 10px;
-	margin-top: 24px;
+	margin-top: 20px;		/* allow space for title */
 	position: absolute;
 	top:0;
 	left:0;
@@ -458,13 +458,14 @@ img {
 	white-space:nowrap;
 }
 
-#comment-title {
-	padding-left: 20px;
-	padding-top: 10px;
-	margin-bottom: 10px;
+#comment-title {	
+	padding-right: 20px;
+	text-align: center;
+	padding-top: 6px;
 	font-family: helvetica, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	font-style: bold;
+	color: white;
 }
 
 
@@ -585,11 +586,13 @@ img {
 	}
 	
 	#comment-title {
-		padding-left: 14px;
+		padding-right: 20px;
+		text-align: center;
 		padding-top: 8px;
 		font-family: helvetica, sans-serif;
 		font-size: 16px;
 		font-style: bold;
+		color: white;
 	}
 
 	
