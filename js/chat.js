@@ -208,6 +208,13 @@ function openPopup(_this, forumId, emailRefreshFlag)
 		
 		
 		
+		//Get the title if it exists
+		var titleUrl = ssshoutServer + '/title-secure.php?uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&server=' + encodeURIComponent(ssshoutServer) + '&clientremoteurl=' + encodeURIComponent(myUrl);
+		jQuery.get(titleUrl, function(data) {
+			jQuery("#comment-title").html(data);
+		});
+		
+		
 		jQuery("#comment-in-here").html('');
 		
 		
@@ -221,6 +228,7 @@ function openPopup(_this, forumId, emailRefreshFlag)
 					
 			jQuery("#comment-in-here").html('<iframe id="comment-iframe" src="' + ssshoutServer + '/search-secure.php?width=' + wid + '&height=' + hei + '&uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&cssFeedback=' + encodeURIComponent(cssFeedback) + '&cssBootstrap=' + encodeURIComponent(cssStrap) + '&server=' + encodeURIComponent(ssshoutServer) + '&clientremoteurl=' + encodeURIComponent(myUrl) + '" frameBorder="0" scrolling="no" width="' + wid + '" height="' + hei + '" onload="jQuery(\'#comment-loading\').hide();" allowfullscreen></iframe>');
 			
+			
 		
 		});
 
@@ -233,16 +241,17 @@ function writeCommentHolder(screenWidth, screenHeight, ssshoutServer, settings, 
 
 	jQuery("#comment-holder").html('<div id="comment-popup-container" style="width:'+screenWidth+'px; height: '+screenHeight+'px" >\
 				<div id="comment-popup" class="comment-popup-style">\
-			 	  <div class="comment-padding">\
-			 	  \
-			 		 <div id="comment-close-popup-container">\
-			 		 	<a id="comment-close-popup" href="javascript:"><img src="' + ssshoutServer + '/images/multiply.png"></a>\
-			 		 	<div style="clear: both;"></div>\
+				  <div id="comment-title"></div>\
+				  <div class="comment-padding">\
+				  \
+					<div id="comment-close-popup-container">\
+						<a id="comment-close-popup" href="javascript:"><img src="' + ssshoutServer + '/images/multiply.png"></a>\
+						<div style="clear: both;"></div>\
 			 		 </div>\
 			 		 <div id="comment-popup-inner">\
 			 		 	<div class="comment-padding-allow-space">\
 			 		 		<div id="comment-popup-text-container">\
-			 		  			<div class="comment-padding">\
+			 		 			<div class="comment-padding">\
 			 		  				<div id="comment-loading"><img src="' + ssshoutServer + '/images/ajax-loader.gif" /></div>\
 			 		  				<div id="comment-in-here"></div>\
 			 					</div>\
@@ -396,33 +405,6 @@ jQuery(document).ready(function() {
 			var helpStr = '&nbsp;&nbsp;<span class="comment-settings" style="float: right; "><a  id="comment-help" style="" target="_blank" href="' + helpURL + '"><img title="' + lsmsg.msgs[lang].helpTitle + '" src="' + ssshoutServer + '/images/help.png"></a></span>';  
 			
 			
-			jQuery(window).resize(function() {
-				/*
-				//On a Window resize, rewrite the comment-holder
-				if(currentWindow.forumId != null) {
-				
-					screenWidth = jQuery(window).width();
-					screenHeight = jQuery(window).height();
-					
-					if(screenWidth != oldScreenWidth) {
-						
-						oldScreenWidth = screenWidth;
-						
-						//TODO: this would get annoying. Need to attach the previous iframe and comms back to it to resize.
-						//Confirm the width has changed - if it is a mobile browser, the height will change on a keyboard input.
-						if(confirm("Would you like to resize your messaging box (you will lose anything you're typing)?")) {
-				
-							//There is an open window
-						
-							writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);
-				
-							openPopup(currentWindow._this, currentWindow.forumId, currentWindow.emailRefreshFlag);
-						}
-					}
-				}
-				*/
-			
-			});
 			
 			//Write the holder
 			writeCommentHolder(screenWidth, screenHeight, ssshoutServer, lsmsg.msgs[lang].settings, uploadStr, emoticonsStr, lsmsg.msgs[lang].privateMessage, helpStr);

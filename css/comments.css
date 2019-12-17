@@ -142,6 +142,7 @@ button:focus {
 
 .comment-padding-allow-space {
 	margin: 10px;
+	margin-top: 24px;
 	position: absolute;
 	top:0;
 	left:0;
@@ -457,6 +458,15 @@ img {
 	white-space:nowrap;
 }
 
+#comment-title {
+	padding-left: 20px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	font-family: helvetica, sans-serif;
+	font-size: 14px;
+	font-style: bold;
+}
+
 
 @media (max-width: 768px) {
 	/* Mobile devices have 100% screens */
@@ -572,6 +582,14 @@ img {
 	.comment-button {
 		margin: 4px;	/* make easier to touch */
 
+	}
+	
+	#comment-title {
+		padding-left: 14px;
+		padding-top: 8px;
+		font-family: helvetica, sans-serif;
+		font-size: 16px;
+		font-style: bold;
 	}
 
 	
