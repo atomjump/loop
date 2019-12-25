@@ -28,9 +28,9 @@ var lsmsg = {
 var lang = lsmsg.defaultLanguage; 
 
 
-if(typeof(initAtomJumpFeedback) == "undefined") {
+if(typeof(atomjumpLoaded) == "undefined") {
 	//If we haven't already been defined in another js file
-
+	var atomjumpLoaded = true;
 
 	function myTrim(x)
 	{
