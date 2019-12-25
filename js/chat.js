@@ -28,7 +28,7 @@ var lsmsg = {
 var lang = lsmsg.defaultLanguage; 
 
 
-if(!initAtomJumpFeedback) {
+if(typeof(initAtomJumpFeedback) !== "undefined") {
 	//If we haven't already been defined in another js file
 
 
