@@ -12,7 +12,7 @@
 #comment-loading {
 	width: 28px; 
 	height: 28px;
-    position:absolute;		/* testing out relative */
+    position:absolute;		
 	top: 50%;
 	left: 50%;
 	margin-left: -14px;
@@ -218,9 +218,7 @@ button:focus {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 100%;
-	/*z-index: 1000;*/
-	
+	width: 100%;	
 }
 
 #comment-popup-container {
@@ -545,7 +543,7 @@ img {
 	
 	.comment-padding-allow-space {
 		margin-top: 24px;			/* smaller left and right, but bigger at top */
-		margin-bottom: 30px;		/* Checking */
+		margin-bottom: 30px;
 		margin-left: 0px;
 		margin-right: 0px;
 		position: absolute;
