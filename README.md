@@ -148,7 +148,7 @@ Note: it can take up to 1 minute before any new message's sentiment will be calc
 ## Wordpress Setup
 
 1. Install the ‘Header and Footer’ plugin. https://wordpress.org/plugins/insert-headers-and-footers/
-2. Go into ‘Settings->Header and Footer’, and enter the two sections from https://atomjump.org/wp/add-atomjump-messaging-to-your-site/. The main block should be entered into the ‘SECTION INJECTION’ section, and the ‘comment holder’ div should be entered into the ‘BEFORE THE CLOSING TAG (FOOTER)’ section.
+2. Go into ‘Settings->Header and Footer’, and enter the two sections from http://atomjump.org/wp/add-atomjump-messaging-to-your-site/. The main block should be entered into the ‘SECTION INJECTION’ section, and the ‘comment holder’ div should be entered into the ‘BEFORE THE CLOSING TAG (FOOTER)’ section.
 3. Any link’s address (i.e. the ‘href’) on the page can now start with ‘#comment-open-‘, followed by the forum name and it will open a popup.
 
 
