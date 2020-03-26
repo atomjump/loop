@@ -186,6 +186,7 @@ if(typeof(atomjumpLoaded) == "undefined") {
 			currentWindow._this = _this;
 			currentWindow.forumId = forumId;
 			currentWindow.emailRefreshFlag = emailRefreshFlag;
+			currentWindow.generalData = "";
 		
 		
 			jQuery('#comment-title').html("");		//Blank out any old title
@@ -254,6 +255,12 @@ if(typeof(atomjumpLoaded) == "undefined") {
 				}
 		
 			}
+			
+			//Get general expandable data e.g. decay period, included in a json value that
+			//is passed in to the server
+			if(jQuery(_this).data('general')) {
+				currentWindow.generalData = jQuery(_this).data('general');			
+			}
 		
 			//Dynamically readjust window to current screen height
 			var screenWidth = jQuery(window).width();
@@ -272,7 +279,7 @@ if(typeof(atomjumpLoaded) == "undefined") {
 				var hei = (jQuery("#comment-popup-text-container").height() - 10);
 			
 					
-				jQuery("#comment-in-here").html('<iframe id="comment-iframe" src="' + ssshoutServer + '/search-secure.php?width=' + wid + '&height=' + hei + '&uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&cssFeedback=' + encodeURIComponent(cssFeedback) + '&cssBootstrap=' + encodeURIComponent(cssStrap) + '&server=' + encodeURIComponent(ssshoutServer) + '&clientremoteurl=' + encodeURIComponent(myUrl) + '" frameBorder="0" scrolling="no" width="' + wid + '" height="' + hei + '" onload="jQuery(\'#comment-loading\').hide();" allowfullscreen></iframe>');
+				jQuery("#comment-in-here").html('<iframe id="comment-iframe" src="' + ssshoutServer + '/search-secure.php?width=' + wid + '&height=' + hei + '&uniqueFeedbackId=' + commentLayer + '&myMachineUser=' + whisperOften + '&cssFeedback=' + encodeURIComponent(cssFeedback) + '&cssBootstrap=' + encodeURIComponent(cssStrap) + '&server=' + encodeURIComponent(ssshoutServer) + '&clientremoteurl=' + encodeURIComponent(myUrl) + '&general=' + encodeURIComponent(currentWindow.generalData) + '" frameBorder="0" scrolling="no" width="' + wid + '" height="' + hei + '" onload="jQuery(\'#comment-loading\').hide();" allowfullscreen></iframe>');
 			
 				// Assign handler to message event
 				if ( window.addEventListener ) {
