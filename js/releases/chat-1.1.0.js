@@ -20,7 +20,7 @@ var lsmsg = {
               "uploadImagesTitleSorry": "La subida de imágenes Lo siento, sólo se admiten en IE10+, o cualquier otro navegador.",
               "sendTo": "Enviar a",
               "emoticonsTitle": "Emoticonos",
-              "helpURL": "https://atomjump.com/wp/user-guide/",
+              "helpURL": "https://atomjump.com/wp/user-guide-es/",
               "helpTitle": "Ayuda"
         },
         "pt":{
@@ -30,7 +30,7 @@ var lsmsg = {
               "uploadImagesTitleSorry": "Os uploads de imagens desagradáveis são suportados apenas no IE10+ ou em qualquer outro navegador.",
               "sendTo": "Enviar para",
               "emoticonsTitle": "Emoticons",
-              "helpURL": "https://atomjump.com/wp/user-guide/",
+              "helpURL": "https://atomjump.com/wp/user-guide-pt/",
               "helpTitle": "Socorro"
         },
          "ch": {
@@ -40,7 +40,7 @@ var lsmsg = {
             "uploadImagesTitleSorry": "对不起，仅在IE10+或其他浏览器上支持图片上传。",
             "sendTo": "发送到",
             "emoticonsTitle": "表情图标",
-             "helpURL": "https://atomjump.com/wp/user-guide/",
+             "helpURL": "https://atomjump.com/wp/user-guide-ch/",
              "helpTitle": "帮助"
         },
         "de": {
@@ -50,7 +50,7 @@ var lsmsg = {
               "uploadImagesTitleSorry": "Das Hochladen von Bildern wird leider nur von IE10 + oder einem anderen Browser unterstützt.",
               "sendTo": "Senden an",
               "emoticonsTitle": "Emoticons",
-              "helpURL": "https://atomjump.com/wp/user-guide/",
+              "helpURL": "https://atomjump.com/wp/user-guide-cht/",
               "helpTitle": "Hilfe"
         },
         "fr": {
@@ -60,7 +60,7 @@ var lsmsg = {
               "uploadImagesTitleSorry": "Désolé, les téléchargements d'images ne sont pris en charge que sur IE10 + ou sur tout autre navigateur.",
               "sendTo": "Envoyer vers",
               "emoticonsTitle": "Émoticônes",
-              "helpURL": "https://atomjump.com/wp/user-guide/",
+              "helpURL": "https://atomjump.com/wp/user-guide-fr/",
               "helpTitle": "Aide"
         },
          "hi": {
@@ -70,7 +70,7 @@ var lsmsg = {
               "uploadImagesTitleSorry": "क्षमा करें छवि अपलोड केवल IE10 +, या किसी भी अन्य पर समर्थित हैं।",
               "sendTo": "सेंड टू",
               "emoticonsTitle": "इमोटिकॉन्स",
-              "helpURL": "https://atomjump.com/wp/user-guide/",
+              "helpURL": "https://atomjump.com/wp/user-guide-hi/",
               "helpTitle": "हेल्प"
         },
          "ru": {
@@ -80,7 +80,7 @@ var lsmsg = {
               "uploadImagesTitleSorry": "Извините, загрузка изображений поддерживается только в IE10 + или любом другом браузере.",
               "sendTo": "Отправить",
               "emoticonsTitle": "Смайлики",
-              "helpURL": "https://atomjump.com/wp/user-guide/",
+              "helpURL": "https://atomjump.com/wp/user-guide-ru/",
               "helpTitle": "Помощь"
         },
         "jp":{
@@ -90,7 +90,7 @@ var lsmsg = {
               "uploadImagesTitleSorry": "申し訳ありませんが,画像のアップロードはIE10 +またはその他のブラウザーでのみサポートされています。",
               "sendTo": "送信先",
               "emoticonsTitle": "絵文字",
-              "helpURL": "https://atomjump.com/wp/user-guide/",
+              "helpURL": "https://atomjump.com/wp/user-guide-jp/",
               "helpTitle": "ヘルプ"
         },
         "bg": {
@@ -110,7 +110,7 @@ var lsmsg = {
               "uploadImagesTitleSorry": "죄송합니다 이미지 업로드는 IE10 + 또는 다른 브라우저에서만 지원됩니다.",
               "sendTo": "보내기",
               "emoticonsTitle": "이모티콘",
-              "helpURL": "https://atomjump.com/wp/user-guide/",
+              "helpURL": "https://atomjump.com/wp/user-guide-ko/",
               "helpTitle": "도움말"
         },
         "pu": {
@@ -120,7 +120,7 @@ var lsmsg = {
               "uploadImagesTitleSorry": "ਅਫਸੋਸ ਹੈ ਕਿ ਚਿੱਤਰ ਅਪਲੋਡ ਸਿਰਫ IE10 +, ਜਾਂ ਕਿਸੇ ਹੋਰ ਬ੍ਰਾ browserਜ਼ਰ 'ਤੇ ਸਹਿਯੋਗੀ ਹਨ.",
               "sendTo": "ਭੇਜੋ",
               "emoticonsTitle": "ਇਮੋਸ਼ਨਸ",
-              "helpURL": "https://atomjump.com/wp/user-guide/",
+              "helpURL": "https://atomjump.com/wp/user-guide-pu/",
               "helpTitle": "ਸਹਾਇਤਾ"
         },
         "it": {
@@ -130,7 +130,7 @@ var lsmsg = {
               "uploadImagesTitleSorry": "I caricamenti di immagini spiacenti sono supportati solo su IE10 + o qualsiasi altro browser.",
               "sendTo": "Invia a",
               "emoticonsTitle": "Emoticons",
-              "helpURL": "https://atomjump.com/wp/user-guide/",
+              "helpURL": "https://atomjump.com/wp/user-guide-it/",
               "helpTitle": "Aiuto"
         },
         "in": {
@@ -140,7 +140,7 @@ var lsmsg = {
               "uploadImagesTitleSorry": "Maaf, unggahan gambar hanya didukung di IE10 +, atau browser lainnya.",
               "sendTo": "Kirim ke",
               "emoticonsTitle": "Emotikon",
-              "helpURL": "https://atomjump.com/wp/user-guide/",
+              "helpURL": "https://atomjump.com/wp/user-guide-in/",
               "helpTitle": "Bantuan"
         },
         "cht":{
@@ -150,9 +150,9 @@ var lsmsg = {
               "uploadImagesTitleSorry":"對不起，僅在IE10+或其他瀏覽器上支持圖片上傳。",
               "sendTo":"發送到",
               "emoticonsTitle":"表情圖標",
-              "helpURL":"https://atomjump.com/wp/user-guide/",
+              "helpURL":"https://atomjump.com/wp/user-guide-cht/",
               "helpTitle":"幫助"
-        }       
+        }  
     }
 }
 var lang = lsmsg.defaultLanguage; 
