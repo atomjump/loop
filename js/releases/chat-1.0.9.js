@@ -50,7 +50,7 @@ var lsmsg = {
               "uploadImagesTitleSorry": "Das Hochladen von Bildern wird leider nur von IE10 + oder einem anderen Browser unterstützt.",
               "sendTo": "Senden an",
               "emoticonsTitle": "Emoticons",
-              "helpURL": "https://atomjump.com/wp/user-guide-cht/",
+              "helpURL": "https://atomjump.com/wp/user-guide-de/",
               "helpTitle": "Hilfe"
         },
         "fr": {
