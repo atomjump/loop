@@ -6,7 +6,7 @@
 This tool provides a 'WhatsApp-like' group discussion forum from a popup on your website. It is good for general messaging, either within a company or family, in either a private or public setting. You can add this to your site easily from
 http://atomjump.org/wp/add-atomjump-messaging-to-your-site/
 
-The client software is entirely Javascript and CSS, but it refers to an AtomJump Messaging server to store messages. This is freely available as a separate project at https://github.com/atomjump/loop-server, or you can use the AtomJump.com server, by default.
+The client software is entirely Javascript and CSS, but it refers to an AtomJump Messaging server to store messages. This is freely available as a separate project at https://src.atomjump.com/atomjump/loop-server, or you can use the AtomJump.com server, by default.
 
 Private forums on the hosted AtomJump.com hosted platform are purchased for US$10 / year to cover the (non-profit) Foundation's costs, but public forums are free, within reason.
 
