@@ -116,9 +116,9 @@ https://atomjump.com/api/download.php
 **Parameters**
 
 1. **email**
-   Your AtomJump Loop email address from the standard interface
+   Your AtomJump Messaging email address from the standard interface
 2. **pass**  
-   Your AtomJump Loop password
+   Your AtomJump Messaging password
 3. **uniqueFeedbackId**  
    The particular forum to view. Note: include 'ajps_' at the start of this string for x.atomjump.com forums.
 4. **from_id**  
